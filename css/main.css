@@ -1,0 +1,195 @@
+/*******************************/
+/***** GENERAL PAGE STYLES *****/
+/*******************************/
+
+button:focus {
+  outline:0 !important;
+}
+
+::selection {
+  background: #f27126; /* WebKit/Blink Browsers */
+  color: #fff;
+}
+::-moz-selection {
+  background: #f27126; /* Gecko Browsers */
+  color: #fff;
+}
+
+
+/*****************************/
+/***** NAVIGATION STYLES *****/
+/*****************************/
+#nav-container {
+  /*padding-top: 76px;*/
+  /* Alert container height offset to work with fixed-top navigation bar */
+  width: 100%;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #f27126;
+}
+
+.btn-dark {
+  /*margin-left: 16px;*/
+  color: #fff;
+  background-color: #f27126;
+  border-width: 2px;
+  border-color: #f27126;
+  transition: .25s;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:focus {
+  background-color: #fff;
+  color: #f27126;
+  border-width: 2px;
+  border-color: #f27126;
+  cursor: pointer;
+}
+
+/************************/
+/***** ALERT STYLES *****/
+/************************/
+#alertContainer {
+  width: 100%;
+  /*margin-top: 8px;*/
+  margin-bottom: -14px;
+}
+
+.alert {
+  background-color: #f27126;
+  border-radius: 0;
+  border-color: #f27126;
+  color: #fff;
+}
+
+button.close span {
+  color: #fff;
+  text-shadow: 0 0px 0 #fff;
+}
+
+button.close {
+  opacity: 1;
+}
+
+button.close span:hover {
+  cursor: pointer;
+}
+
+.alert-link,
+.alert-link:hover,
+.alert-link:active,
+.alert-link:visited {
+  color: #fff;
+  opacity: 0.8;
+}
+
+
+/****************************/
+/***** HERO AREA STYLES *****/
+/****************************/
+#heroContainer {
+  height: 50vh;
+  width: 100%;
+  background: #f27126;
+  /*background: url(../img/snatch-image.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;*/
+}
+
+.lightText {
+  padding-top: 21vh;
+  text-align: center;
+  color: rgba(255,255,255,0.95);
+}
+
+.lightText .lightTextDynamic {
+  color: rgba(255,255,255,0.7);
+}
+
+/*.top-container {
+  padding-top: 50px;
+  height: 85vh;
+  width: 100%;
+  background: #f27126;
+  background: url(../img/ucfHero.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+
+
+/********************************/
+/***** DAILY WORKOUT STYLES *****/
+/********************************/
+.wodBox {
+  height: 36vh;
+  width: 260px;
+  margin-top: 40px;
+  margin-left: 17.5%;
+  background-color: #fff;
+}
+
+.wodTitle{
+  height: 6vh;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding-top: 5px;
+  color: #fff;
+  background-color: #f27126;
+}
+
+.wodDate {
+  height: 6vh;
+  width: 100%;
+  font-weight: 500;
+  padding-top: 5px;
+  background-color: orange;
+}
+
+
+#wodsContainer {
+  width: 100%;
+  background-color: lightblue;
+
+  /*TEST HEIGHT*/
+  height: 1000px;
+}
+
+#wodsContainer .col-1 {
+  background-color: purple;
+}
+
+#wodsContainer .col-10 {
+  background-color: lightblue;
+}
+
+/*Nested row 1*/
+#wodsContainer .red {
+  background-color: red;
+}
+
+#wodsContainer .orange {
+  background-color: #fff;
+}
+
+#wodsContainer .green {
+  background-color: green;
+}
+
+#wodsContainer .gold {
+  background-color: gold;
+}
+
+#wodsContainer .tan {
+  background-color: tan;
+}
