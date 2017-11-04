@@ -1,13 +1,6 @@
 // (function(){
 
-  // function applyActiveStyle() {
-  //   if( $('nav-item').hasClass('active')){
-  //     $('nav-link').css("color", "#f27126");
-  //   }
-  // }
-  //
-  // applyActiveStyle();
-
+  //Toggle active class in navigation bar (and style it)
   $('.menu-item').on('click', function(){
 
     if( $('.menu-item').hasClass('active') ){
@@ -16,62 +9,207 @@
 
     $(this).toggleClass('active');
   });
-  //Toggle active class in navigation bar (and style it)
 
 
+
+
+
+  //Open menu toggle item on mouse over
+  $('.dropdown-toggle').on('mouseenter', function(){
+
+    $('.dropdown-menu').toggleClass('show');
+    $(this).css({"color":"#f27126"});
+    // $('.fa-caret-down').css{("transition":"rotate(180)")};
+
+    //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
+
+
+  });
+
+  $('.dropdown-menu').on('mouseleave', function(){
+
+    $(this).toggleClass('show');
+    $('.dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
+
+    //reverse animate arrow with a css transition class
+
+    //IF MOUSE OVER OTHER MENU-ITEM REMOVE HOVER STYLE
+
+  });
+
+
+  // //BEGIN FIRST ALIGN HAMBURGER CODE
+  //
+  // //**** Navigation events ****
+  // $('.hamburger').click(function(){
+  //
+  //   $(this).toggleClass('is-active');
+  //
+  //   if($('.hamburger').hasClass('is-active')){
+  //
+  //     //Animate in sub-navigation events
+  //     $('.breadcrumb').hide();
+  //     $('.top-container nav').removeClass('nav-shadow');
+  //     $('.sub-nav').toggleClass('show-nav');
+  //
+  //   } else {
+  //     //Animate out sub-navigation events
+  //     $('.top-container nav').addClass('nav-shadow');
+  //     $('.sub-nav').removeClass('show-nav');
+  //     $('.breadcrumb').show();
+  //
+  //   }
+  //
+  // });
+  //
+  // //**** Sub-navigation events ****
+  //
+  // //Initialize sub-navigation
+  // $('.homeMenu').hide();
+  // $('.latestNewsMenu').hide();
+  // $('.servicesMenu').hide();
+  // $('.industriesMenu').hide();
+  // $('.careersMenu').hide();
+  // $('.aboutMenu').hide();
+  //
+  // //Click handlers for each sub-navigation menu list item
+  // $('.home').click(function(){
+  //   $('.sub-nav-list-elements a').removeClass('activeSubNav');
+  //   $(this).addClass('activeSubNav');
+  //   //Add hover effects to all nav elements
+  //
+  //   //Remove hover effect from THIS element
+  //
+  //   //Dynamically style page for "latest news" menu
+  //   $('.servicesMenu').hide();
+  //   $('.industriesMenu').hide();
+  //   $('.careersMenu').hide();
+  //   $('.aboutMenu').hide();
+  //   $('.latestNewsMenu').hide();
+  //   $('.homeMenu').show();
+  //
+  // });
+  //
+  // $('.latestNews').click(function(){
+  //   $('.sub-nav-list-elements a').removeClass('activeSubNav');
+  //   $(this).addClass('activeSubNav');
+  //   //Add hover effects to all nav elements
+  //
+  //   //Remove hover effect from THIS element
+  //
+  //   //Dynamically style page for "latest news" menu
+  //   $('.homeMenu').hide();
+  //   $('.servicesMenu').hide();
+  //   $('.industriesMenu').hide();
+  //   $('.careersMenu').hide();
+  //   $('.aboutMenu').hide();
+  //   $('.latestNewsMenu').show();
+  //
+  // });
+  //
+  // $('.services').click(function(){
+  //   $('.sub-nav-list-elements a').removeClass('activeSubNav');
+  //   $(this).addClass('activeSubNav');
+  //
+  //   //Dynamically style page for "services" menu
+  //
+  //   //Remove hover effect from THIS element
+  //
+  //   //Dynamically style page for "latest news" menu
+  //   $('.homeMenu').hide();
+  //   $('.industriesMenu').hide();
+  //   $('.careersMenu').hide();
+  //   $('.aboutMenu').hide();
+  //   $('.latestNewsMenu').hide();
+  //   $('.servicesMenu').show();
+  // });
+  //
+  // $('.industries').click(function(){
+  //   $('.sub-nav-list-elements a').removeClass('activeSubNav');
+  //   $(this).addClass('activeSubNav');
+  //
+  //   //Dynamically style page for "industries" menu
+  //
+  //   //Remove hover effect from THIS element
+  //
+  //   //Dynamically style page for "latest news" menu
+  //   $('.homeMenu').hide();
+  //   $('.careersMenu').hide();
+  //   $('.aboutMenu').hide();
+  //   $('.latestNewsMenu').hide();
+  //   $('.servicesMenu').hide();
+  //   $('.industriesMenu').show();
+  // });
+  //
+  // $('.careers').click(function(){
+  //   $('.sub-nav-list-elements a').removeClass('activeSubNav');
+  //   $(this).addClass('activeSubNav');
+  //
+  //   //Dynamically style page for "careers" menu
+  //
+  //   //Remove hover effect from THIS element
+  //
+  //   //Dynamically style page for "latest news" menu
+  //   $('.homeMenu').hide();
+  //   $('.aboutMenu').hide();
+  //   $('.latestNewsMenu').hide();
+  //   $('.servicesMenu').hide();
+  //   $('.industriesMenu').hide();
+  //   $('.careersMenu').show();
+  // });
+  //
+  // $('.about').click(function(){
+  //   $('.sub-nav-list-elements a').removeClass('activeSubNav');
+  //   $(this).addClass('activeSubNav');
+  //
+  //   //Dynamically style page for "about" menu
+  //
+  //   //Remove hover effect from THIS element
+  //
+  //   //Dynamically style page for "latest news" menu
+  //   $('.homeMenu').hide();
+  //   $('.latestNewsMenu').hide();
+  //   $('.servicesMenu').hide();
+  //   $('.industriesMenu').hide();
+  //   $('.careersMenu').hide();
+  //   $('.aboutMenu').show();
+  // });
+  // //END FIRST ALIGN HAMBURGER CODE
+
+
+
+  //Manage navigation placement when alert is closed
   $('#ucfAlert').on('closed.bs.alert', function() {
     $('#nav-container').css({"margin-bottom":"14px"});
   });
+
+
+  //Array to populate "Forging Elite" tagline (Final element gets new style)
+  const eliteArr = [
+    "Confidence",
+    "Nakedness",
+    "Happiness",
+    "Mentality",
+    "Health",
+    "Fitness"
+  ];
+
+
+  let counter = 0;
+
+  setInterval(function(){
+
+    if (counter < eliteArr.length){
+      $('.lightTextDynamic').text("");
+      $('.lightTextDynamic').text(eliteArr[counter]);
+    }
+
+    if(eliteArr[counter] === "Fitness"){
+      $('.lightTextDynamic').css({"color": "#fff"});
+    }
+
+    counter++;
+
+  }, 1350);
+
 // })();
-
-
-const eliteArr = [
-  "Friendships",
-  "Confidence",
-  "Nakedness",
-  "Happiness",
-  "Mentality",
-  "Health"
-];
-
-let clickCount = 0;
-
-$('#heroContainer').on('click', function(){
-
-  if(clickCount !== 0){
-    $('#goals').remove(eliteArr[clickCount - 1]);
-  }
-
-  if (clickCount < eliteArr.length){
-    $('#goals').append(eliteArr[clickCount]);
-  }
-  clickCount++;
-
-});
-
-
-function test(){
-  // let index = Math.floor( Math.random() * eliteArr.length );
-  for ( let i = 0; i < eliteArr.length; i++ ){
-    // let index = Math.floor( Math.random() * eliteArr.length );
-    // console.log(`JS is hooked up: ${eliteArr[index]}`);
-
-    console.log(eliteArr[i].append().delay(1000));
-
-    // if (eliteArr.indexOf(index) !== -1) {
-
-
-      // eliteArr.splice(index, 1);
-
-
-    // }
-    //append() eliteArr[index] to lightTextDynamic with delay() and animation()
-
-  }
-
-  console.log("Fitness");
-
-
-}
-
-test();
