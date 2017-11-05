@@ -10,8 +10,32 @@
     $(this).toggleClass('active');
   });
 
+  // //hamburger effect
+  // $('.hamburger').click(function(){
+  //
+  //   $(this).toggleClass('is-active');
+  //
+  //   if($('.hamburger').hasClass('is-active')){
+  //
+  //     //Animate in sub-navigation events
+  //
+  //     // $('.top-container nav').removeClass('nav-shadow');
+  //     $('.sub-nav').toggleClass('show-nav');
+  //
+  //   } else {
+  //     //Animate out sub-navigation events
+  //
+  //     // $('.top-container nav').addClass('nav-shadow');
+  //     $('.sub-nav').removeClass('show-nav');
+  //     // $('.breadcrumb').show();
+  //   }
+  //
+  // });
 
-
+  $('.hamburgler').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('no-hamburgler');
+	});
 
 
   //Open menu toggle item on mouse over
@@ -64,6 +88,9 @@
   //
   // //**** Sub-navigation events ****
   //
+
+    //Use forEach() to initialize
+
   // //Initialize sub-navigation
   // $('.homeMenu').hide();
   // $('.latestNewsMenu').hide();

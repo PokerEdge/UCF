@@ -35,23 +35,27 @@
 
 
     <!-- FAVICON CODE -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/avicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#f27126">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#f27126">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
 
     <title>Ultimate Crossfit - Forging Elite Fitness - Functional fitness strength training and personal trainer Charlotte North Carolina</title>
 
@@ -62,17 +66,27 @@
   </head>
   <body>
 
+  <!-- Parent container -->
+  <div class="container-fluid" id="parent-container">
+
     <!-- NAVIGATION AREA -->
     <div id="nav-container">
       <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
         <a href="#" class="navbar-brand d-flex w-40 mr-auto">
-          <img src="img/UCFminLogo.svg" width="40" height="50" class="d-inline-block align-top" alt="Ultimate Crossfit">
+          <img src="img/UCFminLogo.svg" width="40" height="50" class="d-inline-block align-top d-md-none" alt="Ultimate Crossfit">
+          <img src="img/UCFhorizLogo.svg" width="123.3" height="50" class="d-inline-block align-top d-none d-md-block" alt="Ultimate Crossfit">
         </a>
 
-        <!-- HAMBURGER MENU AND ANIMATION -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <!-- NAVIGATION TOGGLER AND HAMBURGER ANIMATION TO X -->
+        <a href="#toggle" class="hamburgler d-md-none" data-toggle"collapse" data-target="#collapsingNavbar">
+        	<div class="bun top"></div>
+        	<div class="meat"></div>
+        	<div class="bun bottom"></div>
+        </a>
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
         <div class="navbar-collapse collapse" id="collapsingNavbar">
           <ul class="nav navbar-nav ml-auto mr-2 w-100 justify-content-end">
             <li class="nav-item mx-1">
@@ -103,6 +117,11 @@
           </ul>
         </div>
       </nav>
+
+      <nav class="sub-menu">
+        <div class="menu-title">Menu Title</div>
+      </nav>
+
     </div>
 
     <!-- ALERT AREA -->
@@ -171,19 +190,21 @@
 
     <!-- PIT AREA -->
     <div id="pitContainer">
-      <div class="row">
+
+      <div class="row pit-text">
         <div class="col">
-          <div class="row">
-            <!-- <div class="col"></div> -->
-            <div class="col text-center pit-button-placement">
-              <a href="#">
-                <button type="button" class="btn btn-dark pit-button">Visit The Pit</button>
-              </a>
-            </div>
-            <!-- <div class="col"></div> -->
-          </div>
+          <h1 class="text-center"><strong><u>2500</u></strong> SQFT Of Awesome</h1>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col text-center pit-button-placement">
+          <a href="#">
+            <button type="button" class="btn btn-dark pit-button">Visit The Pit</button>
+          </a>
+        </div>
+      </div>
+
     </div>
 
     <!-- WOD AREA -->
@@ -257,20 +278,20 @@
     <!-- Workout plans area -->
     <div id="plansContainer">
       <div class="row">
-        <div class="col-1"></div>
+        <div class="col"></div>
 
         <div class="col-10">
 
             <div class="row">
 
               <div class="col green">
-                <h1>Hello</h1>
+                <h1>plansContainer</h1>
               </div>
 
             </div>
         </div>
 
-        <div class="col-1"></div>
+        <div class="col"></div>
 
       </div>
     </div>
@@ -283,7 +304,7 @@
           <a href="#">Footer</a>
         </div>
 
-        <div class="col red">
+        <div class="col-10 red">
           <a href="#" class="twitter-button"><span class="fa fa-twitter-square"></span></a>
           <a href="#" class="facebook-button"><span class="fa fa-facebook-square"></span></a>
           <a href="#" class="instagram-button"><span class="fa fa-instagram"></span></a>
@@ -299,5 +320,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
+    </div>
   </body>
 </html>
