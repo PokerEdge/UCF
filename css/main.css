@@ -27,13 +27,16 @@ button:focus {
 
 #nav-container {
   z-index: 1;
-  
   /* Alert container height offset to work with fixed-top navigation bar */
   padding-top: 76px;
   padding-right:0;
   width: 100%;
   font-family: "Oswald-SemiBold", arial, sans-serif;
   letter-spacing: 0.05em;
+}
+
+.navbar-light {
+  background-color: #fff;
 }
 
 .nav-get-started {
