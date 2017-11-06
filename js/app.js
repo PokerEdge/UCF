@@ -10,32 +10,26 @@
     $(this).toggleClass('active');
   });
 
-  // //hamburger effect
-  // $('.hamburger').click(function(){
-  //
-  //   $(this).toggleClass('is-active');
-  //
-  //   if($('.hamburger').hasClass('is-active')){
-  //
-  //     //Animate in sub-navigation events
-  //
-  //     // $('.top-container nav').removeClass('nav-shadow');
-  //     $('.sub-nav').toggleClass('show-nav');
-  //
-  //   } else {
-  //     //Animate out sub-navigation events
-  //
-  //     // $('.top-container nav').addClass('nav-shadow');
-  //     $('.sub-nav').removeClass('show-nav');
-  //     // $('.breadcrumb').show();
-  //   }
-  //
-  // });
-
+  //Animate hamburger and toggle showing of sub-navigation menu
   $('.hamburgler').click(function(e){
 		e.preventDefault();
 		$(this).toggleClass('no-hamburgler');
+
+    if( $(this).hasClass('no-hamburgler') ){
+      $('.sub-menu').css({"width":"100%","right":"0%"});
+    } else{
+      $('.sub-menu').css({"width":"0%","right":"-100%"});
+    }
 	});
+
+  //Hide navigation menu on window resize if it was left shown at a 'mobile' width
+  $(window).resize(function() {
+    if ( $(window).width() >= 768 ){
+      $('.hamburgler').removeClass('no-hamburgler');
+      $('.sub-menu').css({"width":"0%","right":"-100%"});
+    }
+  });
+
 
 
   //Open menu toggle item on mouse over

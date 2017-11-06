@@ -71,10 +71,11 @@
 
     <!-- NAVIGATION AREA -->
     <div id="nav-container">
-      <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+
+      <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center fixed-top">
         <a href="#" class="navbar-brand d-flex w-40 mr-auto">
-          <img src="img/UCFminLogo.svg" width="40" height="50" class="d-inline-block align-top d-md-none" alt="Ultimate Crossfit">
-          <img src="img/UCFhorizLogo.svg" width="123.3" height="50" class="d-inline-block align-top d-none d-md-block" alt="Ultimate Crossfit">
+          <img src="img/UCFminLogo.svg" width="40" height="50" class="align-top d-md-none" alt="Ultimate Crossfit">
+          <img src="img/UCFhorizLogo.svg" width="123.3" height="50" class="align-top d-none d-md-block" alt="Ultimate Crossfit">
         </a>
 
         <!-- NAVIGATION TOGGLER AND HAMBURGER ANIMATION TO X -->
@@ -119,7 +120,15 @@
       </nav>
 
       <nav class="sub-menu">
-        <div class="menu-title">Menu Title</div>
+        <div class="menu-title"><strong>Ultimate Crossfit</strong></div>
+        <ul class="sub-menu-items">
+          <li>Athlete Services</li>
+          <li>Today's Workouts</li>
+          <li>Class Schedules</li>
+        </ul>
+        <a class="nav-link" href="#">
+          <button type="button" name="btn btn-dark" class="btn btn-dark sub-nav-button">Get Started</button>
+        </a>
       </nav>
 
     </div>
@@ -177,7 +186,7 @@
 
           <div class="background-fitness d-md-none">
             <h1>What Is Crossfit?</h1>
-            <h2>
+            <h2 class="short-defintion-text">
               <span>increased work capacity across broad time&#32;&amp; modal domains</span>
             </h2>
           </div>

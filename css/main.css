@@ -26,8 +26,10 @@ button:focus {
 /*****************************/
 
 #nav-container {
-  /*padding-top: 76px;*/
+  z-index: 1;
+  
   /* Alert container height offset to work with fixed-top navigation bar */
+  padding-top: 76px;
   padding-right:0;
   width: 100%;
   font-family: "Oswald-SemiBold", arial, sans-serif;
@@ -38,7 +40,10 @@ button:focus {
   letter-spacing: 0.05em;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link,
 .navbar-light .navbar-nav .nav-link:hover {
   color: #f27126;
 }
@@ -186,25 +191,68 @@ button:focus {
 
   .sub-menu {
     z-index: 1;
-    opacity: 0.9;
+    opacity: 0.975;
     position: fixed;
+    /*margin-top: 80px;*/
     width: 0%;
     right: -100%;
-    color: #fff;
+    /*width: 100%;
+    right: 0%;*/
     height: 100vh;
+    font-family: "Gobold-Bold-Italic", arial, sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
     background-color: #f27126;
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
     overflow: hidden;
-    padding-top: 12%;
+    padding-top: 12vh;
   }
 
-  .sub-menu.open-menu {
+  .sub-menu .open-menu {
     width: 100%;
     right: 0%;
   }
+
+    .sub-menu-items {
+      text-align: center;
+      list-style: none;
+      padding-top: 7vh;
+      font-size: 0.8em;
+    }
+
+      .sub-menu-items li {
+        margin-right: 40px;
+        padding-top: 2vh;
+      }
+
+      .sub-menu-items li:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .sub-nav-button {
+        margin-top: 5vh;
+        padding: 2vh 6vh;
+        background-color: rgba(255,255,255,1);
+        color: #f27126;
+        border-width: 3px;
+        border-color: #fff;
+        cursor: pointer;
+      }
+
+      .sub-nav-button:hover,
+      .sub-nav-button:active,
+      .sub-nav-button:focus {
+        background-color: rgba(255,255,255,.05);
+        color: #fff;
+        border-width: 3px;
+        border-color: #fff;
+        cursor: pointer;
+      }
 
   /***********************************************************
    ******END REQUIRES STICKY NAVIGATION TO WORK PROPERLY******
@@ -441,6 +489,7 @@ button.close span:hover {
 
 #defineCrossfitContainer h2 {
   padding-top: 12px;
+  line-height: 1.4;
 }
 
 #defineCrossfitContainer h3 {
@@ -454,7 +503,6 @@ button.close span:hover {
   padding-bottom: 2%;
   font-family: "Oswald-Medium", arial, sans-serif;
 }
-
 
 
 /***************************/
@@ -704,6 +752,32 @@ button.close span:hover {
 
 @media (min-width: 350px) and (max-width: 449px) {
 
+  .sub-menu .menu-title {
+    font-size: .8em;
+  }
+
+  .sub-menu-items {
+    text-align: center;
+    list-style: none;
+    padding-top: 5vh;
+    font-size: 0.55em;
+  }
+
+    .sub-menu-items li {
+      margin-right: 40px;
+      padding-top: 1.5vh;
+    }
+
+    .sub-menu-items li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .sub-nav-button {
+      margin-top: 3.5vh;
+      padding: 3vh 9vh;
+    }
+
   #heroContainer {
 		height: 20vh;
 	}
@@ -758,6 +832,32 @@ button.close span:hover {
 }
 
 @media (min-width: 1px) and (max-width: 349px) {
+
+  .sub-menu .menu-title {
+    font-size: .55em;
+  }
+
+  .sub-menu-items {
+    text-align: center;
+    list-style: none;
+    padding-top: 5vh;
+    font-size: 0.35em;
+  }
+
+    .sub-menu-items li {
+      margin-right: 40px;
+      padding-top: 1.5vh;
+    }
+
+    .sub-menu-items li:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .sub-nav-button {
+      margin-top: 3.5vh;
+      padding: 2.85vh 8.55vh;
+    }
 
   #heroContainer {
 		height: 15vh;
