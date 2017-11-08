@@ -24,6 +24,7 @@
 
   //Hide navigation menu on window resize if it was left shown at a 'mobile' width
   $(window).resize(function() {
+
     if ( $(window).width() >= 768 ){
       $('.hamburgler').removeClass('no-hamburgler');
       $('.sub-menu').css({"width":"0%","right":"-100%"});
@@ -40,7 +41,7 @@
     // $('.fa-caret-down').css{("transition":"rotate(180)")};
 
     //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
-
+    $('.fa-caret-down').addClass('caret-hover');
 
   });
 
@@ -50,6 +51,7 @@
     $('.dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
 
     //reverse animate arrow with a css transition class
+    $('.fa-caret-down').removeClass('caret-hover');
 
     //IF MOUSE OVER OTHER MENU-ITEM REMOVE HOVER STYLE
 

@@ -82,36 +82,14 @@ button:focus {
 }*/
 
 .fa-caret-down {
-  -webkit-animation: flip 5s;
-  -moz-animation:    flip 5s;
-  -o-animation:      flip 5s;
-  animation:         flip 5s;
+  -webkit-transition: 0.25s ease all;
+  transition: 0.25s ease all;
 }
 
-@-webkit-keyframes flip {
-  0%   { opacity: 0; }
-  100% { opacity: 1; transform: rotate(180deg); }
+.fa-caret-down.caret-hover {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
-@-moz-keyframes flip {
-  0%   { opacity: 0; }
-  100% { opacity: 1; transform: rotate(180deg); }
-}
-@-o-keyframes flip {
-  0%   { opacity: 0; }
-  100% { opacity: 1; transform: rotate(180deg); }
-}
-@keyframes flip {
-  0%   { opacity: 0; }
-  100% { opacity: 1; transform: rotate(180deg); }
-}
-
-/*.fa-caret-down {
-  animation:
-}
-
-.fa-caret-down:hover {
-
-}*/
 
 .btn-dark {
   color: #fff;
@@ -138,14 +116,6 @@ button:focus {
 /********************************/
 /*** Hamburger effect classes ***/
 /********************************/
-
-
-
-
-/******************************************************
- ******REQUIRES STICKY NAVIGATION TO WORK PROPERLY******
- ******************************************************/
-
 
 .hamburgler {
   width: 28px;
@@ -207,10 +177,10 @@ button:focus {
     text-align: center;
     color: #fff;
     background-color: #f27126;
-    -webkit-transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -o-transition: all 0.3s linear;
-    transition: all 0.3s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear;
     overflow: hidden;
     padding-top: 12vh;
   }
@@ -256,98 +226,6 @@ button:focus {
         border-color: #fff;
         cursor: pointer;
       }
-
-  /***********************************************************
-   ******END REQUIRES STICKY NAVIGATION TO WORK PROPERLY******
-   **********************************************************/
-
-
-/*.hamburger {
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  margin-top: 9px;
-  overflow: visible; }
-  .hamburger:hover {
-    opacity: 0.7; }
-
-  .hamburger-label {
-    font-weight: 600;
-    display: inline-block;
-    margin-right: 9px;
-    margin-bottom: 11px;
-    vertical-align: middle;
-    text-transform: uppercase;
-  }
-
-  .hamburger-label:hover{
-    opacity: 0.95;
-  }
-
-.hamburger-box {
-  width: 40px;
-  height: 24px;
-  display: inline-block;
-  position: relative; }
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
-    background-color: #000;
-    border-radius: 4px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-  .hamburger-inner::before {
-    top: -10px; }
-  .hamburger-inner::after {
-    bottom: -10px; }
-
-.hamburger--elastic .hamburger-inner {
-  top: 2px;
-  transition-duration: 0.275s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  .hamburger--elastic .hamburger-inner::before {
-    top: 10px;
-    transition: opacity 0.125s 0.275s ease; }
-  .hamburger--elastic .hamburger-inner::after {
-    top: 20px;
-    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-
-.hamburger--elastic.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(135deg);
-  transition-delay: 0.075s; }
-  .hamburger--elastic.is-active .hamburger-inner::before {
-    transition-delay: 0s;
-    opacity: 0; }
-  .hamburger--elastic.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-270deg);
-    transition-delay: 0.075s; }
-
-.nav-shadow {
-  box-shadow: 0px 5px 10px 0px rgba(159,159,159,0.41);
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(159,159,159,0.41);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(159,159,159,0.41);
-}*/
-
-
 
 /************************/
 /***** ALERT STYLES *****/
@@ -405,8 +283,9 @@ button.close span:hover {
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
 }
 
-#heroContainer .place-hero-button-start {
-  padding-top: 8vh;
+#heroContainer .place-hero-button-start,
+#heroContainer .place-hero-button-learn {
+  padding-top: 9vh;
 }
 
 #heroContainer .get-started {
@@ -420,13 +299,6 @@ button.close span:hover {
   transition: 0.25s;
 }
 
-#heroContainer .get-started:hover,
-#heroContainer .learn-more:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #f27126;
-}
-
 #heroContainer .learn-more {
   font-size: 1.1em;
   font-weight: 600;
@@ -438,12 +310,15 @@ button.close span:hover {
   transition: 0.25s;
 }
 
-#heroContainer .place-hero-button-learn {
-  padding-top: 8vh;
+#heroContainer .get-started:hover,
+#heroContainer .learn-more:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #f27126;
 }
 
 .lightText {
-  padding-top: 18vh;
+  padding-top: 20vh;
   text-align: center;
   color: rgba(255,255,255,0.95);
 }
@@ -513,9 +388,9 @@ button.close span:hover {
 /***************************/
 #pitContainer {
   width: 100%;
-  height: 70vh;
+  height: 55vh;
   background-color: #f27126;
-  background: url(../img/pit-image.jpg) no-repeat bottom center fixed;
+  background: url(../img/pit-image.png) no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -523,7 +398,7 @@ button.close span:hover {
 }
 
 #pitContainer .pit-button-placement {
-  padding-top: 16vh;
+  padding-top: 8vh;
 }
 
 #pitContainer .pit-button {
@@ -627,23 +502,62 @@ button.close span:hover {
 
 }
 
+/*******************************
+****** FOOTER AREA STYLES ******
+*******************************/
+
 #footerContainer {
   width: 100%;
+  height: 30vh;
+  font-family: "Oswald-SemiBold", arial, sans-serif;
   overflow: hidden;
-  height: 20vh;
 }
 
-#footerContainer .green {
-  background-color: green;
+#footerContainer .footer-row {
+  margin: 3% 1.5%;
 }
 
-#footerContainer .red {
-  background-color: red;
+#footerContainer .fa-2x {
+  font-size: 1.5em;
+  margin-top: 50%;
 }
 
-#footerContainer .tan {
-  background-color: tan;
+#footerContainer .copyright-text {
+  padding-top: 20px;
+  font-size: 0.8em;
+  color: rgba(0,0,0,0.5)
 }
+
+#footerContainer .footer-link {
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  color: rgba(0,0,0,0.5);
+}
+
+#footerContainer .footer-link:hover {
+  color: rgba(0,0,0,0.6);
+  text-decoration: none;
+}
+
+#footerContainer .footer-text {
+  margin-left: 25%;
+
+}
+
+#footerContainer .twitter-button,
+#footerContainer .facebook-button,
+#footerContainer .instagram-button {
+  color: rgba(0, 0, 0, 0.5);
+  transition: 0.25s;
+}
+
+#footerContainer .twitter-button:hover,
+#footerContainer .facebook-button:hover,
+#footerContainer .instagram-button:hover {
+  color: #f27126;
+  transition: 0.25s;
+}
+
 
 
 
@@ -654,7 +568,7 @@ button.close span:hover {
 @media (min-width: 550px) and (max-width: 700px) {
 
   #heroContainer {
-		height: 40vh;
+		height: 60vh;
 	}
 
   #heroContainer h1 {
@@ -662,12 +576,12 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 11vh;
+    padding-top: 17vh;
   }
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 5vh;
+    padding-top: 8vh;
   }
 
   #heroContainer .get-started,
@@ -705,7 +619,7 @@ button.close span:hover {
 @media (min-width: 450px) and (max-width: 549px) {
 
   #heroContainer {
-		height: 30vh;
+		height: 50vh;
 	}
 
   #heroContainer h1 {
@@ -713,12 +627,12 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 8.4vh;
+    padding-top: 14vh;
   }
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 3vh;
+    padding-top: 5vh;
   }
 
   #heroContainer .get-started,
@@ -782,7 +696,7 @@ button.close span:hover {
     }
 
   #heroContainer {
-		height: 20vh;
+		height: 40vh;
 	}
 
   #heroContainer h1 {
@@ -790,7 +704,7 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 4vh;
+    padding-top: 12vh;
   }
 
   #alertContainer{
@@ -799,7 +713,7 @@ button.close span:hover {
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 1.2vh;
+    padding-top: 3vh;
   }
 
   #heroContainer .get-started,
@@ -863,7 +777,7 @@ button.close span:hover {
     }
 
   #heroContainer {
-		height: 15vh;
+		height: 30vh;
 	}
 
   #heroContainer h1 {
@@ -871,7 +785,7 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 2.6vh;
+    padding-top: 8vh;
   }
 
   #alertContainer{
@@ -880,7 +794,7 @@ button.close span:hover {
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 0.75vh;
+    padding-top: 2vh;
   }
 
   #heroContainer .get-started,
