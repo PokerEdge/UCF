@@ -27,7 +27,6 @@ button:focus {
 
 #nav-container {
   z-index: 1;
-  /* Alert container height offset to work with fixed-top navigation bar */
   padding-top: 76px;
   padding-right:0;
   width: 100%;
@@ -71,15 +70,6 @@ button:focus {
 .dropdown-divider {
   border-top: 3px solid #e9ecef;
 }
-
-/*.dropdown-toggle {
-  -webkit-transition: -webkit-transform .95s ease-in-out;
-          transition:         transform .95s ease-in-out;
-}
-.dropdown-toggle:hover .fa-caret-down {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}*/
 
 .fa-caret-down {
   -webkit-transition: 0.25s ease all;
@@ -166,11 +156,8 @@ button:focus {
     z-index: 1;
     opacity: 0.975;
     position: fixed;
-    /*margin-top: 80px;*/
     width: 0%;
     right: -100%;
-    /*width: 100%;
-    right: 0%;*/
     height: 100vh;
     font-family: "Gobold-Bold-Italic", arial, sans-serif;
     font-size: 3em;
@@ -396,10 +383,12 @@ button.close span:hover {
   height: 120vh;
   color: #fff;
   background-color: #f27126;
+  font-family: "Oswald-Medium", arial, sans-serif;
 }
 
 #plansContainer .plan-main-title {
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  font-size: 3em;
   margin: 8vh 0;
 }
 
@@ -412,16 +401,19 @@ button.close span:hover {
   background: skyblue;
 }
 
-#plansContainer .planTitle h2 {
-  font-size: 0.85em;
+#plansContainer .planTitle {
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  font-size: 1.9em;
 }
 
-#plansContainer .plansList h3 {
-  font-size: .9em;
+#plansContainer .planText {
+  font-family: "Oswald-Medium", arial, sans-serif;
+  font-size: 1em;
 }
 
 #plansContainer .get-started {
   margin-top: 2vh;
+  letter-spacing: 0.05em;
 }
 
 /********************************/
