@@ -289,6 +289,8 @@ button.close span:hover {
 }
 
 #heroContainer .get-started {
+  font-family: "Oswald-Medium", arial, sans-serif;
+  letter-spacing: 0.05em;
   font-size: 1.1em;
   font-weight: 600;
   border-width: 3px;
@@ -300,6 +302,8 @@ button.close span:hover {
 }
 
 #heroContainer .learn-more {
+  font-family: "Oswald-Medium", arial, sans-serif;
+  letter-spacing: 0.05em;
   font-size: 1.1em;
   font-weight: 600;
   border-width: 3px;
@@ -383,14 +387,111 @@ button.close span:hover {
 }
 
 
+/*********************************/
+/***** UCF PLANS AREA STYLES *****/
+/*********************************/
+
+#plansContainer {
+  width: 100%;
+  height: 120vh;
+  color: #fff;
+  background-color: #f27126;
+}
+
+#plansContainer .plan-main-title {
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  margin: 8vh 0;
+}
+
+#plansContainer .plansList {
+  margin-top: 6vh;
+}
+
+#plansContainer .plansList .tomato {
+  height: 26vh;
+  background: skyblue;
+}
+
+#plansContainer .planTitle h2 {
+  font-size: 0.85em;
+}
+
+#plansContainer .plansList h3 {
+  font-size: .9em;
+}
+
+#plansContainer .get-started {
+  margin-top: 2vh;
+}
+
+/********************************/
+/***** TRAINING AREA STYLES *****/
+/********************************/
+
+#trainingContainer {
+  width: 100%;
+  height: 80vh;
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  background-color: #f27126;
+  color: #fff;
+  background: url(../img/training.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#trainingContainer .training-button-placement {
+  padding-top: 7vh;
+}
+
+#trainingContainer .training-button {
+  font-size: 1.1em;
+  font-weight: 600;
+  font-family: "Oswald-Medium", arial, sans-serif;
+  letter-spacing: 0.05em;
+  border-width: 3px;
+  padding: 15px 60px 15px;
+  background-color: #fff;
+  border-color: #fff;
+  color: #f27126;
+  transition: 0.25s;
+}
+
+#trainingContainer .training-button:hover {
+  background-color: #f27126;
+  border-color: #f27126;
+  color: #fff;
+}
+
+#trainingContainer .training-text h1 {
+  margin-top: 10vh;
+  padding: 1.5vh;
+  font-size: 4em;
+  background: rgba(255,255,255,0.7);
+  color: #f27126;
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+}
+
+#trainingContainer .training-text h2 {
+  margin-top: 4vh;
+  padding: 1.5vh;
+  line-height: 1.2;
+  font-size: 1.75em;
+  background: rgba(255,255,255,0.7);
+  color: #f27126;
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+}
+
+
 /***************************/
 /***** PIT AREA STYLES *****/
 /***************************/
 #pitContainer {
   width: 100%;
-  height: 55vh;
+  height: 80vh;
   background-color: #f27126;
-  background: url(../img/pit-image.png) no-repeat bottom center fixed;
+  background: url(../img/pit-image.jpg) no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -406,8 +507,8 @@ button.close span:hover {
   font-weight: 600;
   border-width: 3px;
   padding: 15px 60px 15px;
-  background-color: rgba(255,255,255,0.2);
-  border-color: #fff;
+  background-color: #f27126;
+  border-color: #f27126;
   color: #fff;
   transition: 0.25s;
 }
@@ -419,12 +520,22 @@ button.close span:hover {
 }
 
 #pitContainer .pit-text h1 {
-  padding-top: 16vh;
+  margin-top: 16vh;
   font-size: 4em;
   color: #fff;
+  background: rgba(242,113,38,0.8);
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
 }
 
+#pitContainer .training-text h2 {
+  margin-top: 4vh;
+  padding: 1.5vh;
+  line-height: 1.2;
+  font-size: 1.75em;
+  background: rgba(242,113,38,0.8);
+  color: #fff;
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+}
 
 /********************************/
 /***** DAILY WORKOUT STYLES *****/
@@ -494,12 +605,51 @@ button.close span:hover {
   background-color: tan;
 }
 
-#plansContainer {
-  width: 100%;
-  height: 60vh;
-  color: #fff;
-  background-color: tomato;
 
+/**************************************
+****** BONUS CONTENT AREA STYLES ******
+**************************************/
+
+#bonusServicesContainer {
+  width: 100%;
+  color: #fff;
+}
+
+#bonusServicesContainer .bonusTitle {
+  background-color: lightblue;
+}
+
+#bonusServicesContainer .vacation-workouts {
+  width: 100%;
+  height: 50vh;
+  background: #f27126;
+  background: url(../img/vacation-stairs.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bonusServicesContainer .body-metrics {
+  width: 100%;
+  height: 50vh;
+  background: #f27126;
+  background: url(../img/vacation-stairs.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#bonusServicesContainer .jiu-jitsu {
+  width: 100%;
+  height: 50vh;
+  background: #f27126;
+  background: url(../img/vacation-stairs.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /*******************************
@@ -508,7 +658,7 @@ button.close span:hover {
 
 #footerContainer {
   width: 100%;
-  height: 30vh;
+  height: auto;
   font-family: "Oswald-SemiBold", arial, sans-serif;
   overflow: hidden;
 }
@@ -517,9 +667,14 @@ button.close span:hover {
   margin: 3% 1.5%;
 }
 
+#footerContainer .social-links {
+  text-align: center;
+}
+
 #footerContainer .fa-2x {
   font-size: 1.5em;
-  margin-top: 50%;
+  margin-top: 30%;
+  padding-right: 3.5%;
 }
 
 #footerContainer .copyright-text {
@@ -541,7 +696,7 @@ button.close span:hover {
 
 #footerContainer .footer-text {
   margin-left: 25%;
-
+  letter-spacing: 0.05em;
 }
 
 #footerContainer .twitter-button,
@@ -564,6 +719,27 @@ button.close span:hover {
 /******************************
 ******** MEDIA QUERIES ********
 ******************************/
+
+@media (min-width: 0px) and (max-width: 768px) {
+  #footerContainer .footer-text {
+    margin-left: 0;
+  }
+
+  #footerContainer .social-links {
+    text-align: left;
+  }
+
+  #footerContainer .copyright-text {
+    font-size: 0.7em;
+  }
+
+  #footerContainer .fa-2x {
+      margin-top: 0.75em;
+      padding-right: 0.125em;
+      padding-bottom: 0.75em;
+  }
+
+}
 
 @media (min-width: 550px) and (max-width: 700px) {
 
@@ -593,14 +769,7 @@ button.close span:hover {
   }
 
   #pitContainer {
-    width: 100%;
     height: 56vh;
-    background-color: #f27126;
-    background: url(../img/pit-image.jpg) no-repeat bottom center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
 
   #pitContainer .pit-button-placement {
@@ -610,8 +779,26 @@ button.close span:hover {
   #pitContainer .pit-text h1 {
     padding-top: 15vh;
     font-size: 3em;
-    color: #fff;
-    font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  }
+
+  #trainingContainer {
+    height: 80vh;
+  }
+
+  #trainingContainer .training-button-placement {
+    margin-top: 0;
+  }
+
+  #trainingContainer .training-text h1 {
+    margin-top: 8vh;
+    padding: 1.5vh;
+    font-size: 3em;
+  }
+
+  #trainingContainer .training-text h2 {
+    margin-top: 3vh;
+    padding: 1.5vh;
+    font-size: 1.5em;
   }
 
 }
@@ -644,14 +831,7 @@ button.close span:hover {
   }
 
   #pitContainer {
-    width: 100%;
     height: 42vh;
-    background-color: #f27126;
-    background: url(../img/pit-image.jpg) no-repeat bottom center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
 
   #pitContainer .pit-button-placement {
@@ -661,8 +841,26 @@ button.close span:hover {
   #pitContainer .pit-text h1 {
     padding-top: 12vh;
     font-size: 2.5em;
-    color: #fff;
-    font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  }
+
+  #trainingContainer {
+    height: 70vh;
+  }
+
+  #trainingContainer .training-button-placement {
+    margin-top: 0;
+  }
+
+  #trainingContainer .training-text h1 {
+    margin-top: 8vh;
+    padding: 1.5vh;
+    font-size: 2.6em;
+  }
+
+  #trainingContainer .training-text h2 {
+    margin-top: 2vh;
+    padding: 1.5vh;
+    font-size: 1.3em;
   }
 
 }
@@ -674,8 +872,6 @@ button.close span:hover {
   }
 
   .sub-menu-items {
-    text-align: center;
-    list-style: none;
     padding-top: 5vh;
     font-size: 0.55em;
   }
@@ -683,11 +879,6 @@ button.close span:hover {
     .sub-menu-items li {
       margin-right: 40px;
       padding-top: 1.5vh;
-    }
-
-    .sub-menu-items li:hover {
-      text-decoration: underline;
-      cursor: pointer;
     }
 
     .sub-nav-button {
@@ -725,14 +916,7 @@ button.close span:hover {
   }
 
   #pitContainer {
-    width: 100%;
     height: 28vh;
-    background-color: #f27126;
-    background: url(../img/pit-image.jpg) no-repeat bottom center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
 
   #pitContainer .pit-button-placement {
@@ -742,8 +926,28 @@ button.close span:hover {
   #pitContainer .pit-text h1 {
     padding-top: 7vh;
     font-size: 2em;
-    color: #fff;
-    font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  }
+
+  #trainingContainer {
+    height: 65vh;
+  }
+
+  #trainingContainer .training-button-placement {
+    margin-top: 0;
+  }
+
+  #trainingContainer .training-text h1 {
+    margin-top: 7vh;
+    padding: 1.5vh;
+    font-size: 2em;
+    background-color: rgba(255,255,255,0.85);
+  }
+
+  #trainingContainer .training-text h2 {
+    margin-top: 1.5vh;
+    padding: 1.5vh;
+    font-size: 1em;
+    background-color: rgba(255,255,255,0.85);
   }
 
 }
@@ -755,8 +959,6 @@ button.close span:hover {
   }
 
   .sub-menu-items {
-    text-align: center;
-    list-style: none;
     padding-top: 5vh;
     font-size: 0.35em;
   }
@@ -764,11 +966,6 @@ button.close span:hover {
     .sub-menu-items li {
       margin-right: 40px;
       padding-top: 1.5vh;
-    }
-
-    .sub-menu-items li:hover {
-      text-decoration: underline;
-      cursor: pointer;
     }
 
     .sub-nav-button {
@@ -806,14 +1003,7 @@ button.close span:hover {
   }
 
   #pitContainer {
-    width: 100%;
     height: 21vh;
-    background-color: #f27126;
-    background: url(../img/pit-image.jpg) no-repeat bottom center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
   }
 
   #pitContainer .pit-button-placement {
@@ -823,8 +1013,38 @@ button.close span:hover {
   #pitContainer .pit-text h1 {
     padding-top: 4vh;
     font-size: 1.35em;
-    color: #fff;
-    font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  }
+
+  #trainingContainer {
+    height: 65vh;
+  }
+
+  #trainingContainer .training-button-placement {
+    margin-top: 0;
+  }
+
+  #trainingContainer .training-text h1 {
+    margin-top: 5vh;
+    padding: 1.5vh;
+    font-size: 1.8em;
+    background-color: rgba(255,255,255,0.85);
+  }
+
+  #trainingContainer .training-text h2 {
+    margin-top: 1.2vh;
+    padding: 1.5vh;
+    font-size: 0.9em;
+    line-height: 1.3;
+    background-color: rgba(255,255,255,0.85);
+  }
+
+  #trainingContainer .training-button {
+    font-size: 1.1em;
+    font-weight: 600;
+    font-family: "Oswald-Medium", arial, sans-serif;
+    letter-spacing: 0.05em;
+    border-width: 3px;
+    padding: 10px 40px 10px;
   }
 
 }
