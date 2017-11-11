@@ -28,11 +28,21 @@
 
     if ( $window.width() >= 768 ){
       $('.hamburgler').removeClass('no-hamburgler');
-      $('.sub-menu').css({"width":"0%","right":"-100%"});
+      $('.sub-menu').css({"width":"0%", "right":"-100%"});
     }
   });
 
-
+  //Open contact links in new tab or window on click
+  $('.contact-link').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if(!a.test(this.href)) {
+       $(this).click(function(e) {
+           e.preventDefault();
+           e.stopPropagation();
+           window.open(this.href, '_blank');
+       });
+    }
+  });
 
   //Open menu toggle item on mouse over
   $('.dropdown-toggle').on('mouseenter', function(){
