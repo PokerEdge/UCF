@@ -246,8 +246,8 @@ button.close span:hover {
 .alert-link:hover,
 .alert-link:active,
 .alert-link:visited {
-  color: #fff;
-  opacity: 0.8;
+  color: #fff !important;
+  opacity: 0.8 !important;
 }
 
 
@@ -542,6 +542,7 @@ button.close span:hover {
   color: #fff;
   background: rgba(242,113,38,0.9);
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  padding: 1.5vh
 }
 
 #pitContainer .training-text h2 {

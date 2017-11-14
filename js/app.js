@@ -44,6 +44,17 @@
     }
   });
 
+  $('.get-started').each(function() {
+   var a = new RegExp('/' + window.location.host + '/');
+   if(!a.test(this.href)) {
+       $(this).click(function(e) {
+           e.preventDefault();
+           e.stopPropagation();
+           window.open(this.href, '_blank');
+       });
+    }
+  });
+
   //Open menu toggle item on mouse over
   $('.dropdown-toggle').on('mouseenter', function(){
 
@@ -62,7 +73,34 @@
     $('.dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
 
     //reverse animate arrow with a css transition class
+
+    //USE CLASS THAT ISN'T FA-CARET-DOWN
     $('.fa-caret-down').removeClass('caret-hover');
+
+    //IF MOUSE OVER OTHER MENU-ITEM REMOVE HOVER STYLE
+
+  });
+
+  //CALENDAR PAGE DROPDOWN
+  //Open menu toggle item on mouse over
+  $('.calendar-dropdown-toggle').on('mouseenter', function(){
+
+    $('.calendar-dropdown-menu').toggleClass('show');
+    $(this).css({"color":"#f27126"});
+
+    //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
+    $('.calendar-caret').addClass('caret-hover');
+
+  });
+
+  $('.calendar-dropdown-menu').on('mouseleave', function(){
+
+    $(this).toggleClass('show');
+    //
+    $('.calendar-dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
+
+    //reverse animate arrow with a css transition class
+    $('.calendar-caret').removeClass('caret-hover');
 
     //IF MOUSE OVER OTHER MENU-ITEM REMOVE HOVER STYLE
 
