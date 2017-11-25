@@ -6,7 +6,7 @@
 /***** CALENDAR AREA STYLES *****/
 /********************************/
 #calendarContainer {
-  height: 436vh;
+  height: 500vh;
   width: 100%;
   background: rgb(245,245,245);
 }
@@ -50,6 +50,9 @@
   margin-top: 6vh;
 }
 
+
+/*Hide overflow*/
+
 .users {
   table-layout: fixed;
   margin: auto;
@@ -60,20 +63,26 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  border-bottom-color: #fff;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
 }
+
+.users td.bottom-border-design {
+  border-bottom-color: #f27126;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+}
+
 .users th {
   background: #f27126;
   color: white;
 }
 .users td,
 .users th {
-  /*text-align: left; */
   height: 6vh;
   padding: 0;
 }
-/*.users tr:nth-child(even) {
-  background: rgba(202,202,202,0.7);
-}*/
 
 .calendar-dark {
   background: rgba(202,202,202,0.7);
@@ -81,10 +90,10 @@
 
 /* Column widths are based on these cells */
 .row-header {
-  width: 5.5%;
+  width: 9%;
 }
 .row-wod {
-  width: 13.5%;
+  width: 13%;
 }
 
 .cell-design-top {
@@ -93,29 +102,56 @@
   border-bottom-color: #fff;
 }
 
-.cell-design-right {
+.cell-design-left {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #fff;
   border-left-style: solid;
   border-left-width: 3px;
   border-left-color: #fff;
 }
 
-.cell-design-left {
+.cell-design-bottom-dark {
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #f27126;
+}
+
+.cell-design-right {
   border-right-style: solid;
-  border-right-width: 2px;
+  border-right-width: 3px;
   border-right-color: #fff;
 }
+
+.cell-design-left {
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: #fff;
+}
+
+.calendar-time {
+  font-size: 0.8em;
+}
+
 
 .first-class {
   padding-top: 28%;
 }
 
-/*For connected top*/
-.top-wod {
+.saturday {
+  border-right-width: 3px;
+}
+
+/*For connected top - White border-top & border-bottom is orange*/
+.top-wod-connected-first-row {
   width: 100%;
-  border-top-color: #fff;
-  border-top-width: 1.5px;
+  border-top-color: #f27126;
+  border-top-width: 3px;
   border-top-style: solid;
-  /*padding-bottom: 50%;*/
+  border-bottom-color: #f27126;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  padding-top: 100%;
   margin-right: 2.5%;
   background: #f27126;
   color: #fff;
@@ -123,7 +159,24 @@
   font-weight: 600;
 }
 
-.middle-wod {
+/*THIS IS FOR NON-FIRST WOD SINCE FIRST WOD AS PRE-DEFINED WHITE TOP BORDER*/
+.top-wod-connected {
+  width: 100%;
+  border-top-color: #f27126;
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-bottom-color: #f27126;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  padding-top: 100%;
+  margin-right: 2.5%;
+  background: #f27126;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.middle-wod-connected {
   width: 100%;
   border-bottom-color: #fff;
   border-bottom-width: 0;
@@ -136,13 +189,17 @@
   font-weight: 600;
 }
 
-/*For connected bottom*/
-.bottom-wod {
+/*For connected bottom - No bottom border & border-top is orange*/
+/*FIX*/
+.bottom-wod-connected {
   width: 100%;
+  border-top-color: #f27126;
+  border-top-width: 3px;
+  border-top-style: solid;
   border-bottom-color: #fff;
-  border-bottom-width: 1.5px;
+  border-bottom-width: 3px;
   border-bottom-style: solid;
-  padding-top: 50%;
+  padding-top: 100%;
   margin-right: 2.5%;
   background: #f27126;
   color: #fff;
@@ -151,12 +208,12 @@
 }
 
 /*For disconnected wod*/
-.top-wod-alone {
+.top-wod {
   width: 100%;
   border-top-color: #fff;
   border-top-width: 3px;
   border-top-style: solid;
-  padding-bottom: 50%;
+  /*padding-bottom: 50%;*/
   margin-right: 2.5%;
   background: #f27126;
   color: #fff;
@@ -178,6 +235,24 @@
   font-weight: 600;
 }
 
+.half-hour {
+  margin-bottom: 100%;
+}
+
+.orange {
+  background: #f27126;
+  height: 30vh;
+  padding-bottom: 5%;
+  /*padding-bottom: 75%;*/
+  border-bottom-width: 1.5px;
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+  border-right-width: 2px;
+  border-right-color: #fff;
+  border-right-style: solid;
+  /*margin-bottom: 40%;*/
+}
+
 .wod-hr {
   background: #fff;
   border-top-width: 1px;
@@ -185,6 +260,17 @@
   border-top-color: #fff;
   margin: 0 10%;
   margin-bottom: 1em;
+}
+
+.border-bottom {
+  border-bottom-color: #f27126;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
+/*USE overflow-y: visible; SOMEHOW WITHIN LONGER ELEMENTS*/
+.overflow-y {
+  overflow-y: visible !important;
 }
 
 .on-half-hour-wod {
@@ -202,7 +288,7 @@
 
 .calendar:nth-child(even) {
 
-}*/
+}
 
 .session-style {
   font-family: "Oswald-SemiBold", arial, sans-serif;
