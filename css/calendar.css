@@ -100,6 +100,9 @@
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: #fff;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #fff;
 }
 
 .cell-design-left {
