@@ -1,5 +1,11 @@
 // (function(){
 
+  //HIDE CLASS NAME OF PARTICULAR TYPE FOR FILTER
+  // $('.class-oly').hide();
+  // $('.class-crossfit').hide();
+  // $('.class-openGym').hide();
+  // $('.class-conditioning').hide();
+
   const $window = $(window);
   //Toggle active class in navigation bar (and style it)
   $('.menu-item').on('click', function(){
