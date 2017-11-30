@@ -47,11 +47,10 @@
 
 .calendar-dropdown a {
   padding: 2vh;
-  margin-top: 6vh;
+  margin-top: 0vh;
 }
 
-
-/*Hide overflow*/
+/*STYLE :ACTIVE STATE FOR DROPDOWN*/
 
 .users {
   table-layout: fixed;

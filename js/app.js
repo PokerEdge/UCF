@@ -105,20 +105,27 @@
   });
 
   //CALENDAR PAGE DROPDOWN
-  //Open menu toggle item on mouse over
+  //Open or close menu toggle item on click
   $('.calendar-dropdown-toggle').on('click', function(){
+    // CLOSE TOGGLE IF OPEN... IF NOT OPEN, OPEN.
+
+    // if ( $('.calendar-dropdown-menu').hasClass('show') ){
+    //   $('.calendar-dropdown-menu').removeClass('show');
+    // }
+    //
+    // if ( !$('.calendar-dropdown-menu').hasClass('show') ){
+    //   $('.calendar-dropdown-menu').addClass('show');
+    // }
 
     $('.calendar-dropdown-menu').show();
-    // $(this).css({"color":"#f27126"});
 
-    //MANAGE THESE CLASS NAMES TO KEEP CARET ANIMATION INDEPEDENT FROM NAV CARET
     $('.calendar-caret').addClass('caret-hover');
   });
 
   $('.calendar-dropdown-menu').on('mouseleave', function(){
 
     //MAKE DISPLAY NONE A HELPER CLASS
-    $(this).hide();
+    $(this).hide(250);
     //
     $('.calendar-dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
 
@@ -130,6 +137,8 @@
   });
 
 
+//CREATE CLICK FUNCTIONALITY FOR NAV DROPDOWN LINKS
+
   //HIDING CLASS NAME OF PARTICULAR TYPE TESTING FOR FILTERING FUNCTIONALITY
 
   // $crossfit.hide();
@@ -138,28 +147,110 @@
   // $conditioning.hide();
   // $oly.hide();
 
-  $('.dropdown-item').on('click', function(){
+  $('.calendar-dropdown-item').on('click', function(){
 
-    if(){
+    //remove classes to start
+      //add class to menu item then check for case that menu-item has class
+        //if menu-item has class, then hide all but the class name corresponding
+        //to the id of the menu-item
+
+
+    //RESET IS NOT WORKING
+
+    // $('.calendar-dropdown-item').removeClass('filtered');
+    $crossfit.show();
+    $('#crossfit').removeClass('filtered');
+
+    $oly.show();
+    $('#oly').removeClass('filtered');
+
+    $openGym.show();
+    $('#openGym').removeClass('filtered');
+
+    $conditioning.show();
+    $('#conditioning').removeClass('filtered');
+
+    $(this).addClass('filtered');
+
+    //USE SWITCH STATEMENT
+
+    //EXAMPLE SWITCH STATEMENT
+    // function checkFruit() {
+    //   var text;
+    //   var fruits = document.getElementById("myInput").value;
+    //
+    //   switch(fruits) {
+    //     case "Banana":
+    //       text = "Banana is good!";
+    //       break;
+    //     case "Orange":
+    //       text = "I am not a fan of orange.";
+    //       break;
+    //     case "Apple":
+    //       text = "How you like them apples?";
+    //       break;
+    //     default:
+    //       text = "I have never heard of that fruit.";
+    //   }
+    //   document.getElementById("demo").innerHTML = text;
+    // }
+
+
+    // If Crossfit clicked
+    if( $('#crossfit').hasClass('filtered') ){
+
       // $crossfit.hide();
+      $oly.hide();
+      $openGym.hide();
+      $conditioning.hide();
+
+      // Close filter dropdown menu
+      $('.calendar-dropdown-menu').hide();
+
+      console.log( "Crossfit" );
+
+    } else if( $('#oly').hasClass('filtered') ) {
+
+      $crossfit.hide();
       // $oly.hide();
+      $openGym.hide();
+      $conditioning.hide();
+
+      // Close filter dropdown menu
+      $('.calendar-dropdown-menu').hide();
+
+      console.log( "Oly" );
+
+    } else if( $('#openGym').hasClass('filtered') ) {
+
+      $crossfit.hide();
+      $oly.hide();
       // $openGym.hide();
+      $conditioning.hide();
+
+      // Close filter dropdown menu
+      $('.calendar-dropdown-menu').hide();
+
+      console.log( "Open Gym" );
+
+    } else if( $('#conditioning').hasClass('filtered') ){
+
+      $crossfit.hide();
+      $oly.hide();
+      $openGym.hide();
       // $conditioning.hide();
-    } else if() {
-      // $crossfit.hide();
-      // $oly.hide();
-      // $openGym.hide();
-      // $conditioning.hide();
-    } else if() {
-      // $crossfit.hide();
-      // $oly.hide();
-      // $openGym.hide();
-      // $conditioning.hide();
-    } else if(){
-      // $crossfit.hide();
-      // $oly.hide();
-      // $openGym.hide();
-      // $conditioning.hide();
+
+      // Close filter dropdown menu
+      $('.calendar-dropdown-menu').hide();
+
+      console.log( "Conditioning" );
+
+    } else {
+      // Close filter dropdown menu
+      $('.calendar-dropdown-menu').hide();
+      $('.calendar-dropdown-item').removeClass('filtered');
+      console.log("whoops");
+
     }
 
   });
