@@ -155,9 +155,9 @@
         //to the id of the menu-item
 
 
-    //RESET IS NOT WORKING
+    //Resets for filters
+    $('#calendarContainer').css({"height":"420vh"});
 
-    // $('.calendar-dropdown-item').removeClass('filtered');
     $crossfit.show();
     $('#crossfit').removeClass('filtered');
 
@@ -207,6 +207,9 @@
       // Close filter dropdown menu
       $('.calendar-dropdown-menu').hide();
 
+      //Adjust page HEIGHT
+      $('#calendarContainer').css({"height":"280vh"});
+
       console.log( "Crossfit" );
 
     } else if( $('#oly').hasClass('filtered') ) {
@@ -218,6 +221,9 @@
 
       // Close filter dropdown menu
       $('.calendar-dropdown-menu').hide();
+
+      //Adjust page HEIGHT
+      $('#calendarContainer').css({"height":"264vh"});
 
       console.log( "Oly" );
 
@@ -231,6 +237,9 @@
       // Close filter dropdown menu
       $('.calendar-dropdown-menu').hide();
 
+      //Adjust page HEIGHT
+      $('#calendarContainer').css({"height":"290vh"});
+
       console.log( "Open Gym" );
 
     } else if( $('#conditioning').hasClass('filtered') ){
@@ -243,17 +252,47 @@
       // Close filter dropdown menu
       $('.calendar-dropdown-menu').hide();
 
+      //Adjust page HEIGHT
+      $('#calendarContainer').css({"height":"244vh"});
+
       console.log( "Conditioning" );
 
     } else {
       // Close filter dropdown menu
       $('.calendar-dropdown-menu').hide();
       $('.calendar-dropdown-item').removeClass('filtered');
-      console.log("whoops");
+
+      //Adjust page HEIGHT
+      $('#calendarContainer').css({"height":"420vh"});
+
+      console.log("Default");
 
     }
 
+    //STYLE UNOCCUPIED TABLE CELLS AFTER FILTERING
+
+  //   const $tableCells = $('.users td');
+  //   const tableArr = [];
+  //
+  //   // for(let i = 0; i < $tableCells.length; i++){
+  //   //
+  //   //   // tableArr.push($tableCells:nth-child(3));
+  //   //
+  //   //   // if(!){
+  //   //   //
+  //   //   // }
+  //   //   // console.log(i);
+  //   // }
+  //
+  //   console.log ( $('users td') );
+  //
   });
+
+
+  //TEXT OF ENTIRE CALENDAR
+  //$('.users tbody').children().children().text();
+
+
   // HIDE CALENDAR DROPDOWN WHEN LINK IS CLICKED
     // TAKE FILTER ACTION TO HIDE ALL BUT CLICKED LINK ITEM IN DROPDOWN
 

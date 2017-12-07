@@ -6,7 +6,7 @@
 /***** CALENDAR AREA STYLES *****/
 /********************************/
 #calendarContainer {
-  height: 440vh;
+  height: 420vh;
   width: 100%;
   background: rgb(245,245,245);
 }
@@ -74,7 +74,7 @@
 }
 
 .users th {
-  background: #f27126;
+  background: rgba(0,0,0,0.5);
   color: white;
 }
 .users td,
