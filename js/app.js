@@ -12,9 +12,13 @@
   const $conditioning = $('.class-conditioning');
 
   //Add formated current date to top of calendar message
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  const date = new Date().toLocaleString('en-US', options);
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const date = new Date().toLocaleString('en-US', dateOptions);
   $('#currentDate').append(date);
+
+  const numbericDateOptions = { weekday: 'short', month: 'short', day: 'numeric' }
+  const numericDate = new Date().toLocaleString('en-US', numbericDateOptions)
+  $('#numericDate').append(numericDate);
 
   //Toggle active class in navigation bar (and style it)
   $('.menu-item').on('click', function(){
@@ -103,6 +107,30 @@
     $('.dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
     $('.fa-caret-down').removeClass('caret-hover');
   });
+
+  /*************************************
+  ******** FORMAT WORKOUT AREA *********
+  *************************************/
+
+  // TODO: Loop over each workout element's text in order to keep code DRY
+    // Get count of workout text sections on a page
+      // Loop through elements
+      // Format each element
+      // Replace HTML on page with formatted element
+
+      // var x = document.getElementsByClassName("example");
+      // var i;
+      // for (i = 0; i < x.length; i++) {
+      //     x[i].style.backgroundColor = "red";
+      // }
+
+  let $workoutTextPrimary = $('#workoutTextPrimary').text().split(' ').slice(0,25).join(' ').concat('...');
+  document.getElementById('workoutTextPrimary').innerHTML = $workoutTextPrimary;
+
+  let $workoutTextSecondary = $('#workoutTextSecondary').text().split(' ').slice(0,25).join(' ').concat('...');
+  document.getElementById('workoutTextSecondary').innerHTML = $workoutTextSecondary;
+
+
 
   //CALENDAR PAGE DROPDOWN
   //Open or close menu toggle item on click
@@ -306,7 +334,7 @@
   //Array to populate "Forging Elite" tagline (Final element gets new style)
   const eliteArr = [
     "Confidence",
-    "Nakedness",
+    "Motivation",
     "Happiness",
     "Mentality",
     "Health",
