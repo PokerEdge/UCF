@@ -12,14 +12,17 @@
   const $conditioning = $('.class-conditioning');
 
   //Add formated current date to top of calendar message
-  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateOptions = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
   const date = new Date().toLocaleString('en-US', dateOptions);
   $('#currentDate').append(date);
 
-  const numbericDateOptions = { weekday: 'short', month: 'short', day: 'numeric' }
+  const numbericDateOptions = { weekday: 'long', month: 'short', day: 'numeric' }
   const numericDate = new Date().toLocaleString('en-US', numbericDateOptions)
-  $('#numericDate').append(numericDate);
 
+  const eachDateText = document.getElementsByClassName('numericDate');
+  for(let i = 0; i < eachDateText.length; i++){
+    eachDateText[i].innerText = numericDate;
+  }
   //Toggle active class in navigation bar (and style it)
   $('.menu-item').on('click', function(){
 
@@ -43,11 +46,21 @@
 	});
 
   //Hide navigation menu on window resize if it was left shown at a 'mobile' width
+  //Manipulate SVG size in sub-navigation
   $window.resize(function() {
 
-    if ( $window.width() >= 768 ){
+    if ( $window.width() >= 768 ) {
       $('.hamburgler').removeClass('no-hamburgler');
       $('.sub-menu').css({"width":"0%", "right":"-100%"});
+    }
+
+    if ( $window.width() <= 530 ) {
+      $('.noCrownLogo').attr({'width': '300', 'height': '92.14'});
+      // width="500" height="153.57"
+    }
+
+    if ( $window.width() > 530 ) {
+      $('.noCrownLogo').attr({'width': '500', 'height': '153.57'});
     }
   });
 
@@ -112,23 +125,17 @@
   ******** FORMAT WORKOUT AREA *********
   *************************************/
 
-  // TODO: Loop over each workout element's text in order to keep code DRY
-    // Get count of workout text sections on a page
-      // Loop through elements
-      // Format each element
-      // Replace HTML on page with formatted element
+  const workOutText = document.getElementsByClassName('workoutText');
 
-      // var x = document.getElementsByClassName("example");
-      // var i;
-      // for (i = 0; i < x.length; i++) {
-      //     x[i].style.backgroundColor = "red";
-      // }
+  for(let i = 0; i < workOutText.length; i++){
+    document.getElementsByClassName('workoutText')[i].innerText = document.getElementsByClassName('workoutText')[i].innerText.split(' ').slice(0,25).join(' ').concat('...');
+  }
 
-  let $workoutTextPrimary = $('#workoutTextPrimary').text().split(' ').slice(0,25).join(' ').concat('...');
-  document.getElementById('workoutTextPrimary').innerHTML = $workoutTextPrimary;
-
-  let $workoutTextSecondary = $('#workoutTextSecondary').text().split(' ').slice(0,25).join(' ').concat('...');
-  document.getElementById('workoutTextSecondary').innerHTML = $workoutTextSecondary;
+  // let $workoutTextPrimary = $('#workoutTextPrimary').text().split(' ').slice(0,25).join(' ').concat('...');
+  // document.getElementById('workoutTextPrimary').innerHTML = $workoutTextPrimary;
+  //
+  // let $workoutTextSecondary = $('#workoutTextSecondary').text().split(' ').slice(0,25).join(' ').concat('...');
+  // document.getElementById('workoutTextSecondary').innerHTML = $workoutTextSecondary;
 
 
 

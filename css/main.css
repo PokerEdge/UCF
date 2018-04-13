@@ -327,12 +327,12 @@ button.close span:hover {
 
 #dailyWorkoutsContainer {
   width: 100%;
-  height: 56vh;
+  height: 72vh;
   overflow: hidden;
   padding: 4% 0 2%;
   background-color: #f27126;
   color: #fff;
-  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  font-family: "Oswald-SemiBold", arial, sans-serif;
 }
 
 #dailyWorkoutsContainer .learn-more {
@@ -358,8 +358,13 @@ button.close span:hover {
   font-size: 3em;
 }
 
+#dailyWorkoutsContainer .workoutTextBackground {
+  background: rgba(255,255,255,0.1);
+  padding: 1em;
+}
+
 #dailyWorkoutsContainer .workoutPart {
-  margin-top: 1vh;
+  margin: 2em 0 1em;
 }
 
 #dailyWorkoutsContainer .workoutDescription {
@@ -372,17 +377,27 @@ button.close span:hover {
 }
 
 #dailyWorkoutsContainer h4 {
-  font-size: 1.2em;
-  padding-bottom: 2%;
-  font-family: "Oswald-Medium", arial, sans-serif;
+  font-size: 1.4em;
+  font-family: "Oswald-SemiBold", arial, sans-serif;
 }
 
 #dailyWorkoutsContainer h5 {
-  font-size: 0.9em;
+  font-size: 1em;
+  line-height: 1.25;
   padding-bottom: 2%;
   font-family: "Oswald-Medium", arial, sans-serif;
 }
 
+#dailyWorkoutsContainer .workoutButton {
+  margin-top: 1em;
+  background: #fff;
+  color: #f27126;
+}
+
+#dailyWorkoutsContainer .workoutButton:hover {
+  background: #f27126;
+  color: #fff;
+}
 
 
 /*********************************/
