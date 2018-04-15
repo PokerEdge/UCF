@@ -6,16 +6,16 @@
 /***** CALENDAR AREA STYLES *****/
 /********************************/
 #calendarContainer {
-  height: 420vh;
+  height: 422vh;
   width: 100%;
   background: rgb(245,245,245);
 }
 
 .calendar-title {
-  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  font-family: "Oswald-SemiBold", arial, sans-serif;
   font-size: 3em;
   color: #f27126;
-  padding-top: 8vh;
+  padding: 6vh 0 2vh 0;
   text-align: center;
 }
 

@@ -10,9 +10,10 @@
   const $oly = $('.class-oly');
   const $openGym = $('.class-openGym');
   const $conditioning = $('.class-conditioning');
+  const $showAll = $('#showAll');
 
   //Add formated current date to top of calendar message
-  const dateOptions = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+  const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const date = new Date().toLocaleString('en-US', dateOptions);
   $('#currentDate').append(date);
 
@@ -103,7 +104,7 @@
     $('.dropdown-toggle').css({"color": "rgba(0, 0, 0, 0.5)"});
   });
 
-  //Open menu toggle item on mouse over
+  //Open NAV menu toggle item on mouse over
   $('.dropdown-toggle').on('mouseenter', function(){
 
     $('.dropdown-menu').toggleClass('show');
@@ -118,6 +119,25 @@
   $('.dropdown-menu').on('mouseleave', function(){
     $(this).toggleClass('show');
     $('.dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
+    $('.fa-caret-down').removeClass('caret-hover');
+  });
+
+  //Open CALENDAR menu toggle item on mouse over
+  $('.calendar-dropdown-toggle').on('mouseenter', function(){
+
+    // $('.dropdown-menu-calendar').toggleClass('show');
+    $('.calendar-dropdown-menu').toggleClass('show');
+    $(this).css({"color":"#f27126"});
+    // $('.fa-caret-down').css{("transition":"rotate(180)")};
+
+    //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
+    $('.fa-caret-down').addClass('caret-hover');
+
+  });
+
+  $('.dropdown-menu-calendar').on('mouseleave', function(){
+    $(this).toggleClass('show');
+    $('.dropdown-toggle-calendar').css({"color":"rgba(0,0,0,0.5)"});
     $('.fa-caret-down').removeClass('caret-hover');
   });
 
@@ -191,7 +211,7 @@
 
 
     //Resets for filters
-    $('#calendarContainer').css({"height":"420vh"});
+    $('#calendarContainer').css({"height":"422vh"});
 
     $crossfit.show();
     $('#crossfit').removeClass('filtered');
@@ -204,6 +224,8 @@
 
     $conditioning.show();
     $('#conditioning').removeClass('filtered');
+
+    $showAll.hasClass('filtered');
 
     $(this).addClass('filtered');
 
@@ -230,7 +252,6 @@
     //   document.getElementById("demo").innerHTML = text;
     // }
 
-
     // If Crossfit clicked
     if( $('#crossfit').hasClass('filtered') ){
 
@@ -247,6 +268,7 @@
 
       console.log( "Crossfit" );
 
+    // If Oly clicked
     } else if( $('#oly').hasClass('filtered') ) {
 
       $crossfit.hide();
@@ -262,6 +284,7 @@
 
       console.log( "Oly" );
 
+    // If Open Gym clicked
     } else if( $('#openGym').hasClass('filtered') ) {
 
       $crossfit.hide();
@@ -277,6 +300,7 @@
 
       console.log( "Open Gym" );
 
+    // If Conditioning clicked
     } else if( $('#conditioning').hasClass('filtered') ){
 
       $crossfit.hide();
@@ -292,13 +316,24 @@
 
       console.log( "Conditioning" );
 
+    } else if ( $('#showAll').hasClass('filtered') ){
+      $crossfit.show();
+      $oly.show();
+      $openGym.show();
+      $conditioning.show();
+
+      //Reset page HEIGHT
+      $('#calendarContainer').css({"height":"422vh"});
+
+      console.log('Show all');
+
     } else {
       // Close filter dropdown menu
       $('.calendar-dropdown-menu').hide();
       $('.calendar-dropdown-item').removeClass('filtered');
 
       //Adjust page HEIGHT
-      $('#calendarContainer').css({"height":"420vh"});
+      $('#calendarContainer').css({"height":"422vh"});
 
       console.log("Default");
 

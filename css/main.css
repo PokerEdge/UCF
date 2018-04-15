@@ -249,6 +249,7 @@ button.close span:hover {
 .alert-link:visited {
   color: #fff !important;
   opacity: 0.8 !important;
+  text-decoration: underline;
 }
 
 
