@@ -389,7 +389,7 @@ button.close span:hover {
 }
 
 #dailyWorkoutsContainer .workoutButton {
-  margin-top: 1em;
+  margin-top: 2em;
   background: #fff;
   color: #f27126;
 }
@@ -864,6 +864,14 @@ button.close span:hover {
 
 @media (min-width: 0px) and (max-width: 768px) {
 
+  #dailyWorkoutsContainer {
+    height: 84vh;
+  }
+
+  #dailyWorkoutsContainer .workoutButton {
+    margin-top: 0.75em;
+  }
+
   #plansContainer {
     height: 128vh;
   }
@@ -940,6 +948,83 @@ button.close span:hover {
       padding-bottom: 0.75em;
   }
 
+}
+
+@media (min-width: 0px) and (max-width: 560px) {
+
+  #dailyWorkoutsContainer {
+    height: 76vh;
+  }
+
+  #dailyWorkoutsContainer h1 {
+    font-size: 1.9em;
+  }
+
+  #dailyWorkoutsContainer h4 {
+    font-size: 1em;
+  }
+
+  #dailyWorkoutsContainer h5 {
+    line-height: 1.2;
+    font-size: 0.8em;
+  }
+
+  #dailyWorkoutsContainer .workoutButton {
+    margin-top: 0em;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 560px) {
+
+  #dailyWorkoutsContainer {
+    height: 84vh;
+  }
+
+  #dailyWorkoutsContainer h1 {
+    font-size: 1.75em;
+  }
+
+  #dailyWorkoutsContainer h3 {
+    font-size: 1.5em;
+  }
+
+  #dailyWorkoutsContainer h4 {
+    font-size: 1.4em;
+  }
+
+  #dailyWorkoutsContainer h5 {
+    line-height: 1.2;
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 350px) {
+  #dailyWorkoutsContainer .workoutButton {
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+    border-width: 2px;
+    padding: 10px 40px 10px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+
+  #dailyWorkoutsContainer h1 {
+    font-size: 1.6em;
+  }
+
+  #dailyWorkoutsContainer h3 {
+    font-size: 1.4em;
+  }
+
+  #dailyWorkoutsContainer .workoutButton {
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
+    border-width: 2px;
+    padding: 10px 40px 10px;
+  }
 }
 
 @media (min-width: 550px) and (max-width: 700px) {
@@ -1205,7 +1290,7 @@ button.close span:hover {
 
 }
 
-@media (min-width: 1px) and (max-width: 349px) {
+@media (min-width: 0px) and (max-width: 349px) {
 
   .sub-menu .menu-title {
     font-size: .55em;
