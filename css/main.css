@@ -271,6 +271,7 @@ button.close span:hover {
 #heroContainer h1 {
   font-size: 4rem;
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  text-shadow: 1px 1px 1px #000;
 }
 
 #heroContainer .place-hero-button-start,
@@ -790,7 +791,7 @@ button.close span:hover {
 }
 
 #footerContainer .footer-link {
-  font-size: 1em;
+  font-size: 0.875em;
   letter-spacing: 0.05em;
   color: rgba(0,0,0,0.5);
 }
@@ -1096,6 +1097,11 @@ button.close span:hover {
 
 @media (min-width: 450px) and (max-width: 549px) {
 
+  .noCrownLogo {
+    width: 300px;
+    height: 92.14px;
+  }
+
   #heroContainer {
 		height: 50vh;
 	}
@@ -1164,6 +1170,11 @@ button.close span:hover {
 
 @media (min-width: 350px) and (max-width: 449px) {
 
+  .noCrownLogo {
+    width: 300px;
+    height: 92.14px;
+  }
+
   .sub-menu .menu-title {
     font-size: .8em;
   }
@@ -1174,7 +1185,7 @@ button.close span:hover {
   }
 
     .sub-menu-items li {
-      margin-right: 40px;
+      /* margin-right: 40px; */
       padding-top: 1.5vh;
     }
 
@@ -1292,6 +1303,11 @@ button.close span:hover {
 }
 
 @media (min-width: 0px) and (max-width: 349px) {
+
+  .noCrownLogo {
+    width: 300px;
+    height: 92.14px;
+  }
 
   .sub-menu .menu-title {
     font-size: .55em;

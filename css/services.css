@@ -1,0 +1,143 @@
+#servicesContainer {
+  height: 60vh;
+  width: 100%;
+
+  /* Background with fallbacks */
+  background: rgba(0, 0, 0, 0.5) url(../img/foundations-hero-big.jpg) no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#servicesContainer h1 {
+  font-size: 6em;
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  padding-top: 16vh;
+  text-align: center;
+}
+
+#servicesContainer h1.lightText {
+  text-shadow: 1px 1px 1px #000;
+}
+
+#servicesContainer h2 {
+  font-size: 2.5em;
+  font-family: "Oswald-Medium", arial, sans-serif;
+  padding-top: 4vh;
+  text-align: center;
+}
+
+#servicesContainer h2.lightText {
+  text-shadow: 1px 1px 1px #000;
+}
+
+#servicesDescriptionContainer .row {
+  background: #f27126;
+}
+
+#servicesDescriptionContainer .row h1 {
+  font-family: "Oswald-SemiBold", arial, sans-serif;
+  /* letter-spacing: 0.05em; */
+  color: #fff;
+}
+
+#servicesDescriptionContainer .row h2 {
+  font-family: "Oswald-SemiBold", arial, sans-serif;
+  /* letter-spacing: 0.05em; */
+  color: #fff;
+}
+
+#servicesDescriptionContainer .row.description {
+  padding-top: 4vh;
+}
+
+#servicesDescriptionContainer .row.rowCTA {
+  padding-top: 2vh;
+}
+
+#servicesDescriptionContainer .row.rowCTA h1 {
+  color: #6d6e70;
+}
+
+#servicesDescriptionContainer .headerDivider {
+   border-right: 2px solid #fff;
+   height: 80px;
+   margin: 10px 0;
+}
+
+#servicesDescriptionContainer .hi {
+  height: 100px;
+}
+
+#servicesDescriptionContainer .yellow {
+  background-color: yellow;
+}
+#servicesDescriptionContainer .blue {
+  background-color: teal;
+}
+#servicesDescriptionContainer .purple {
+  background-color: purple;
+}
+#servicesDescriptionContainer .green {
+  background-color: green;
+}
+
+
+/******************************/
+/* SERVICES RESPONSIVE STYLES */
+/******************************/
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+  #servicesContainer {
+    height: 40vh;
+  }
+
+  #servicesContainer h1 {
+    font-size: 4em;
+    padding-top: 12vh;
+  }
+
+  #servicesContainer h2 {
+    font-size: 1.67em;
+    padding-top: 3vh;
+  }
+
+}
+
+@media (min-width: 350px) and (max-width: 575px) {
+
+  #servicesContainer {
+    height: 30vh;
+  }
+
+  #servicesContainer h1 {
+    font-size: 3em;
+    padding-top: 9vh;
+  }
+
+  #servicesContainer h2 {
+    font-size: 1.25em;
+    padding-top: 2vh;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 349px) {
+
+  #servicesContainer {
+    height: 20vh;
+  }
+
+  #servicesContainer h1 {
+    font-size: 2em;
+    padding-top: 6vh;
+  }
+
+  #servicesContainer h2 {
+    font-size: 1em;
+    padding-top: 1.5vh;
+  }
+
+}

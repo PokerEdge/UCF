@@ -55,14 +55,14 @@
       $('.sub-menu').css({"width":"0%", "right":"-100%"});
     }
 
-    if ( $window.width() <= 530 ) {
-      $('.noCrownLogo').attr({'width': '300', 'height': '92.14'});
-      // width="500" height="153.57"
-    }
-
-    if ( $window.width() > 530 ) {
-      $('.noCrownLogo').attr({'width': '500', 'height': '153.57'});
-    }
+    // if ( $window.width() <= 530 ) {
+    //   $('.noCrownLogo').attr({'width': '300', 'height': '92.14'});
+    //   // width="500" height="153.57"
+    // }
+    //
+    // if ( $window.width() > 530 ) {
+    //   $('.noCrownLogo').attr({'width': '500', 'height': '153.57'});
+    // }
   });
 
   // Open contact links in new tab or window on click
