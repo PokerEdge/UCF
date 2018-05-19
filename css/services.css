@@ -38,18 +38,52 @@
 
 #servicesDescriptionContainer .row h1 {
   font-family: "Oswald-SemiBold", arial, sans-serif;
-  /* letter-spacing: 0.05em; */
+  font-size: 2em;
+  letter-spacing: 0.01em;
   color: #fff;
 }
 
 #servicesDescriptionContainer .row h2 {
   font-family: "Oswald-SemiBold", arial, sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+#servicesDescriptionContainer .row h3 {
+  font-family: "Oswald-SemiBold", arial, sans-serif;
   /* letter-spacing: 0.05em; */
   color: #fff;
+  font-size: 1.8em;
+}
+
+#servicesDescriptionContainer .row h4 {
+  font-family: "Oswald-SemiBold", arial, sans-serif;
+  /* letter-spacing: 0.05em; */
+  color: #fff;
+  font-size: 1.1em;
 }
 
 #servicesDescriptionContainer .row.description {
   padding-top: 2vh;
+}
+
+#servicesDescriptionContainer .row.description-mid {
+  background-color: #fff;
+  color: #f27126;
+}
+
+#servicesDescriptionContainer .headerDivider {
+   border-right: 2px solid #fff;
+   height: 80px;
+   margin: 10px 0;
+}
+
+/******/
+#servicesDescriptionContainer .description-mid .headerDivider {
+  border-right: 2px solid #f27126;
+  height: 80px;
+  margin: 10px 0;
 }
 
 #servicesDescriptionContainer .row.rowCTA {
@@ -60,10 +94,29 @@
   color: #6d6e70;
 }
 
-#servicesDescriptionContainer .headerDivider {
-   border-right: 2px solid #fff;
-   height: 80px;
-   margin: 10px 0;
+#servicesDescriptionContainer .description-buttons {
+  margin-top: 4%;
+}
+
+#servicesDescriptionContainer .place-hero-button-start,
+#servicesDescriptionContainer .place-hero-button-learn {
+  font-family: "Oswald-Medium", arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-width: 3px;
+  background-color: rgba(255,255,255);
+  border-color: #fff;
+  color: #fff;
+  transition: 0.25s;
+}
+
+#servicesDescriptionContainer button {
+  letter-spacing: 0.05em;
+}
+
+#servicesDescriptionContainer .service-area-top {
+  height: 20vh;
+  overflow-y: hidden;
 }
 
 #servicesDescriptionContainer .hi {
