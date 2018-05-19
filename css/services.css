@@ -11,7 +11,7 @@
 }
 
 #servicesContainer h1 {
-  font-size: 6em;
+  font-size: 5em;
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
   padding-top: 16vh;
   text-align: center;
@@ -49,7 +49,7 @@
 }
 
 #servicesDescriptionContainer .row.description {
-  padding-top: 4vh;
+  padding-top: 2vh;
 }
 
 #servicesDescriptionContainer .row.rowCTA {

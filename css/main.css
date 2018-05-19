@@ -266,6 +266,7 @@ button.close span:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  /* overflow-y: hidden; */
 }
 
 #heroContainer h1 {
@@ -335,6 +336,7 @@ button.close span:hover {
   background-color: #f27126;
   color: #fff;
   font-family: "Oswald-SemiBold", arial, sans-serif;
+  overflow-y: hidden;
 }
 
 #dailyWorkoutsContainer .learn-more {
@@ -412,6 +414,7 @@ button.close span:hover {
   background-color: #f27126;
   color: #fff;
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  overflow-y: hidden;
 }
 
 #defineCrossfitContainer .background-fitness {
@@ -467,6 +470,7 @@ button.close span:hover {
   color: #fff;
   background-color: #f27126;
   font-family: "Oswald-Medium", arial, sans-serif;
+  overflow-y: hidden;
 }
 
 #plansContainer .plan-main-title {
@@ -539,6 +543,7 @@ button.close span:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-y: hidden;
 }
 
 #trainingContainer .training-button-placement {
@@ -596,6 +601,7 @@ button.close span:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-y: hidden;
 }
 
 #pitContainer .pit-button-placement {
@@ -729,6 +735,7 @@ button.close span:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow-y: hidden;
 }
 
 #bonusServicesContainer .body-metrics {
