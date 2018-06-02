@@ -330,7 +330,7 @@ button.close span:hover {
 
 #dailyWorkoutsContainer {
   width: 100%;
-  height: 72vh;
+  height: 50vh;
   overflow: hidden;
   padding: 4% 0 2%;
   background-color: #f27126;
@@ -874,7 +874,7 @@ button.close span:hover {
 @media (min-width: 0px) and (max-width: 768px) {
 
   #dailyWorkoutsContainer {
-    height: 84vh;
+    height: 56vh;
   }
 
   #dailyWorkoutsContainer .workoutButton {
@@ -961,10 +961,6 @@ button.close span:hover {
 
 @media (min-width: 0px) and (max-width: 560px) {
 
-  #dailyWorkoutsContainer {
-    height: 76vh;
-  }
-
   #dailyWorkoutsContainer h1 {
     font-size: 1.9em;
   }
@@ -986,7 +982,7 @@ button.close span:hover {
 @media (min-width: 301px) and (max-width: 560px) {
 
   #dailyWorkoutsContainer {
-    height: 84vh;
+    height: 60vh;
   }
 
   #dailyWorkoutsContainer h1 {

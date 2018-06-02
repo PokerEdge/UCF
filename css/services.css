@@ -120,8 +120,32 @@
 }
 
 #servicesDescriptionContainer .hi {
-  height: 100px;
+  height: 80px;
 }
+
+#servicesDescriptionContainer .center {
+  align-content: center;
+}
+
+#servicesDescriptionContainer .services-button {
+  background: #f27126;
+  border: 3px solid #fff;
+  border-radius: 0px;
+  transition: 0.25s;
+  color: #fff;
+  text-align: center;
+  padding: .5rem .75rem;
+  /* font-family: "Oswald-Medium", arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 600; */
+}
+
+#servicesDescriptionContainer .services-button:hover {
+  background: #fff;
+  color: #f27126;
+  transition: 0.25s;
+}
+
 
 #servicesDescriptionContainer .yellow {
   background-color: yellow;
