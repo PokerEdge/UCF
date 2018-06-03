@@ -1,3 +1,6 @@
+// TODO: Separate carat menu hover effects from nav bar and from calendar filter
+// TODO: Hide menu on mouseleave of menu
+
 // (function(){
 
   'use strict';
@@ -123,10 +126,14 @@
   });
 
   //Open CALENDAR menu toggle item on mouse over
+
+  // Reset drop down on load
+  $('.calendar-dropdown-menu').hide();
+
   $('.calendar-dropdown-toggle').on('mouseenter', function(){
 
     // $('.dropdown-menu-calendar').toggleClass('show');
-    $('.calendar-dropdown-menu').toggleClass('show');
+    $('.calendar-dropdown-menu').show();
     $(this).css({"color":"#f27126"});
     // $('.fa-caret-down').css{("transition":"rotate(180)")};
 
@@ -135,8 +142,15 @@
 
   });
 
+
+  $('.calendar-dropdown-toggle').on('mouseleave', function(){
+    $('.dropdown-menu-calendar').hide();
+    $('.fa-caret-down').removeClass('caret-hover');
+  });
+
+  // TODO: Hide menu on mouseleave of menu
   $('.dropdown-menu-calendar').on('mouseleave', function(){
-    $(this).toggleClass('show');
+    $(this).hide();
     $('.dropdown-toggle-calendar').css({"color":"rgba(0,0,0,0.5)"});
     $('.fa-caret-down').removeClass('caret-hover');
   });
