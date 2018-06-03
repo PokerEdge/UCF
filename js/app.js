@@ -2,8 +2,9 @@
 // TODO: Hide menu on mouseleave of menu
 // TODO: Bind event handlers to calendar dropdown menu
   // On mouse leave of dropdown menu, menu items should hide
-  
+
 // TODO: Carat in both navigation and in calendar dropdown rotate on mouseover. Each should rotate on actions related to the element.
+  // Duplicate carat class with a new for the calendar dropdown animation class (to be toggled)
 
 // TODO: When calendar menu is open && user mouseleave the menu dropdown header, the carat changes, which is incorrect
   // Carat should only rotate on hide (pointing down) or on show (pointing up) of menu items
@@ -115,6 +116,8 @@
   });
 
   //Open NAV menu toggle item on mouse over
+
+  // TODO: MAKE NAV SPECIFIC VERSION DROPDOWN CODE HERE
   $('.dropdown-toggle').on('mouseenter', function(){
 
     $('.dropdown-menu').toggleClass('show');
@@ -123,6 +126,18 @@
 
     //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
     $('.fa-caret-down').addClass('caret-hover');
+
+  });
+
+  // TODO: MAKE CALENDAR VERSION OF NAV DROPDOWN CODE HERE
+  $('.calendar-dropdown-toggle').on('mouseenter', function(){
+
+    $('.calendar-dropdown-menu').toggleClass('show');
+    $(this).css({"color":"#f27126"});
+    // $('.fa-caret-down').css{("transition":"rotate(180)")};
+
+    //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
+    $('.calendar-caret').addClass('caret-hover');
 
   });
 
@@ -145,21 +160,28 @@
     // $('.fa-caret-down').css{("transition":"rotate(180)")};
 
     //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
-    $('.fa-caret-down').addClass('caret-hover');
+    $('.calendar-fa-caret-down').addClass('calendar-caret-hover');
 
   });
 
 
   $('.calendar-dropdown-toggle').on('mouseleave', function(){
-    $('.dropdown-menu-calendar').hide();
-    $('.fa-caret-down').removeClass('caret-hover');
+    $('.calendar-dropdown-menu').hide();
+    // TODO: Menu hides properly but animation does not work during hide
+    $('.calendar-fa-caret-down').removeClass('calendar-caret-hover');
   });
 
-  // TODO: Hide menu on mouseleave of menu
+  // TODO: THIS IS WORKING WHEN MOUSELEAVE MENU ITEM - NOT WHEN MOUSE LEAVES MENU BUTTON
+  $('.calendar-dropdown-menu').on('mouseleave', function(){
+    $('.dropdown-menu-calendar').hide();
+    $('.calendar-fa-caret-down').removeClass('calendar-caret-hover');
+  });
+
+  // Hide menu on mouseleave of menu
   $('.dropdown-menu-calendar').on('mouseleave', function(){
     $(this).hide();
     $('.dropdown-toggle-calendar').css({"color":"rgba(0,0,0,0.5)"});
-    $('.fa-caret-down').removeClass('caret-hover');
+    $('.calendar-fa-caret-down').removeClass('calendar-caret-hover');
   });
 
   /*************************************
