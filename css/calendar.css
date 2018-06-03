@@ -5,8 +5,15 @@
 /********************************/
 /***** CALENDAR AREA STYLES *****/
 /********************************/
+
+/* TODO: Style dropdown menu for calendar filter */
+
 #calendarContainer {
-  height: 422vh;
+  /* Manage that this view height does not push menu items into footer when menu is open
+    if open, height 355vh (will change with styled menu)
+    if closed height 340vh
+   */
+  height: 355vh;
   width: 100%;
   background: rgb(245,245,245);
 }

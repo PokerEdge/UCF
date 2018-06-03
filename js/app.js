@@ -1,5 +1,12 @@
 // TODO: Separate carat menu hover effects from nav bar and from calendar filter
 // TODO: Hide menu on mouseleave of menu
+// TODO: Bind event handlers to calendar dropdown menu
+  // On mouse leave of dropdown menu, menu items should hide
+  
+// TODO: Carat in both navigation and in calendar dropdown rotate on mouseover. Each should rotate on actions related to the element.
+
+// TODO: When calendar menu is open && user mouseleave the menu dropdown header, the carat changes, which is incorrect
+  // Carat should only rotate on hide (pointing down) or on show (pointing up) of menu items
 
 // (function(){
 

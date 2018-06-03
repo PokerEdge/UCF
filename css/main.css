@@ -330,7 +330,8 @@ button.close span:hover {
 
 #dailyWorkoutsContainer {
   width: 100%;
-  height: 50vh;
+  /* TODO: Fix vh issue - height not being auto causes element misalignment */
+  height: 72vh;
   overflow: hidden;
   padding: 4% 0 2%;
   background-color: #f27126;
@@ -874,7 +875,7 @@ button.close span:hover {
 @media (min-width: 0px) and (max-width: 768px) {
 
   #dailyWorkoutsContainer {
-    height: 56vh;
+    height: 84vh;
   }
 
   #dailyWorkoutsContainer .workoutButton {
@@ -961,6 +962,10 @@ button.close span:hover {
 
 @media (min-width: 0px) and (max-width: 560px) {
 
+  #dailyWorkoutsContainer {
+    height: 76vh;
+  }
+
   #dailyWorkoutsContainer h1 {
     font-size: 1.9em;
   }
@@ -982,7 +987,7 @@ button.close span:hover {
 @media (min-width: 301px) and (max-width: 560px) {
 
   #dailyWorkoutsContainer {
-    height: 60vh;
+    height: 96vh;
   }
 
   #dailyWorkoutsContainer h1 {
@@ -1014,6 +1019,10 @@ button.close span:hover {
 }
 
 @media (min-width: 0px) and (max-width: 300px) {
+
+  #dailyWorkoutsContainer {
+    height: 86vh;
+  }
 
   #dailyWorkoutsContainer h1 {
     font-size: 1.6em;
