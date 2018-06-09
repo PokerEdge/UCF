@@ -303,7 +303,6 @@ button.close span:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* overflow-y: hidden; */
 }
 
 #heroContainer h1 {
@@ -501,7 +500,7 @@ button.close span:hover {
 /*********************************/
 /***** UCF PLANS AREA STYLES *****/
 /*********************************/
-
+/*
 #plansContainer {
   width: 100%;
   height: 144vh;
@@ -564,7 +563,89 @@ button.close span:hover {
   border-color: #fff;
   border-width: 3px;
   border-style: solid;
+} */
+
+
+
+/******************************************************/
+/***** ATHLETE SERVICES AREA STYLES FOR HOME PAGE *****/
+/******************************************************/
+
+#athleteServicesContainer {
+  width: 100%;
+  height: auto;
+
+  /* TODO: edit background-color to #f27126 */
+  background-color: #f27126;
+  color: #fff;
+  font-family: "Oswald-Medium", arial, sans-serif;
+  overflow-y: hidden;
+  padding-bottom: 6%;
 }
+
+#athleteServicesContainer .athleteServiceChoiceContainer {
+  border: 3px #fff solid;
+  height: 300px;
+}
+
+#athleteServicesContainer .athleteServicesHeaderText {
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  font-size: 3em;
+  margin: 6% 0;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#athleteServicesContainer .servicesGallery {
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#athleteServicesContainer .servicesGalleryHeaderText {
+  font-size: 2em;
+  text-shadow: 1px 2px 2px #333;
+  margin-top: 20px;
+  /* Push button and link down due to odd anchor tag position inside of image */
+  margin-bottom: 160px;
+}
+
+#athleteServicesContainer .crossfitService {
+  max-width: 29.33333333%;
+  margin: 0 3%;
+  background: #f27126 url(../img/optimization_tinyjpg/compressed/crossfit-home-page.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+
+#athleteServicesContainer .conditioningService {
+  max-width: 29.33333333%;
+  margin-right: 3%;
+  background: #f27126 url(../img/optimization_tinyjpg/compressed/conditioning-home-page.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+
+#athleteServicesContainer .personalTrainingService {
+  max-width: 29.33333333%;
+  margin-right: 3%;
+  background: #f27126 url(../img/optimization_tinyjpg/compressed/personal-training-home-page.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+
+#athleteServicesContainer .get-started {
+  letter-spacing: 0.05em;
+  background: #fff;
+  border-color: #fff;
+  color: #f27126;
+}
+
+#athleteServicesContainer .get-started:hover {
+  background: #f27126;
+  color: #fff;
+}
+
+
 
 /********************************/
 /***** TRAINING AREA STYLES *****/
@@ -572,7 +653,7 @@ button.close span:hover {
 
 #trainingContainer {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
   background-color: #f27126;
   color: #fff;
@@ -634,7 +715,7 @@ button.close span:hover {
   width: 100%;
   height: 80vh;
   background-color: #f27126;
-  background: url(../img/pit-image.jpg) no-repeat bottom center fixed;
+  background: url(../img/pit-image.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -643,7 +724,7 @@ button.close span:hover {
 }
 
 #pitContainer .pit-button-placement {
-  padding-top: 8vh;
+  padding-top: 6vh;
 }
 
 #pitContainer .pit-button {
@@ -664,7 +745,7 @@ button.close span:hover {
 }
 
 #pitContainer .pit-text h1 {
-  margin-top: 16vh;
+  margin-top: 10vh;
   font-size: 4em;
   color: #fff;
   background: rgba(242,113,38,0.9);
@@ -673,7 +754,7 @@ button.close span:hover {
 }
 
 #pitContainer .training-text h2 {
-  margin-top: 4vh;
+  margin-top: 28vh;
   padding: 1.5vh;
   line-height: 1.2;
   font-size: 1.75em;
