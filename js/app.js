@@ -415,6 +415,22 @@
     $('#nav-container').css({"margin-bottom":"14px"});
   });
 
+  // TODO: Curtail title with JavaScript to maintain scalable style.
+
+  const archiveListItemTitle = document.getElementsByClassName('archiveListItemTitle');
+
+  for(let i = 0; i < archiveListItemTitle.length; i++){
+    document.getElementsByClassName('archiveListItemTitle')[i].innerText = document.getElementsByClassName('archiveListItemTitle')[i].innerText.split(' ').slice(0,5).join(' ').concat('...');
+  }
+  //
+  // let archiveListItemTitle = [];
+  //
+  // for()
+  // $('.archiveListItemTitle').length;
+  //
+  // for(let i = 0; i < archiveListItemTitle.length; i++){
+  //   document.getElementsByClassName('archiveListItemTitle')[i].innerText = document.getElementsByClassName('archiveListItemTitle')[i].innerText.split(' ').slice(0,15).join(' ').concat('...');
+  // }
 
   //Array to populate "Forging Elite" tagline (Final element gets new style)
   const eliteArr = [
