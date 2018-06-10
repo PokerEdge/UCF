@@ -1,9 +1,7 @@
 #servicesContainer {
-  height: 60vh;
+  height: 500px;
   width: 100%;
-
-  /* Background with fallbacks */
-  background: rgba(0, 0, 0, 0.5) url(../img/foundations-hero-big.jpg) no-repeat center top fixed;
+  background: rgba(0, 0, 0, 0.5) url(../img/foundations-hero-big.jpg) no-repeat center 30% scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,7 +11,7 @@
 #servicesContainer h1 {
   font-size: 5em;
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
-  padding-top: 16vh;
+  padding-top: 160px;
   text-align: center;
 }
 
@@ -32,7 +30,89 @@
   text-shadow: 1px 1px 1px #000;
 }
 
-#servicesDescriptionContainer .row {
+/*******************************/
+/* servicesTextButtonContainer */
+/*******************************/
+
+#servicesTextButtonContainer {
+  background: #f27126;
+  color: #fff;
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  margin: 0;
+}
+
+#servicesTextButtonContainer .servicesRowStyle {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 5% 2.5%;
+}
+
+/* background: rgba(255,255,255,0.1);
+padding: 1em; */
+
+#servicesTextButtonContainer .colTextStyle {
+  background: rgba(255,255,255,0.1);
+  padding: 1em;
+  margin: 0 2.5%;
+  max-width: 45%;
+
+  /* border: 3px rgba(255,255,255,1) solid; */
+}
+
+#servicesTextButtonContainer .colButtonStyle {
+  background: rgba(255,255,255,0.1);
+  text-align: center;
+  margin: 0 2.5%;
+  max-width: 45%;
+
+  /* border: 3px #fff solid; */
+}
+
+#servicesTextButtonContainer .serviceDescriptionTitleText {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+#servicesTextButtonContainer .serviceDescriptionText {
+  font-size: 1em;
+  font-weight: 400;
+}
+
+#servicesTextButtonContainer .serviceLearnMoreText {
+  font-size: 2em;
+  text-align: center;
+}
+
+#servicesTextButtonContainer .get-started {
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  letter-spacing: 0.05em;
+  background: #fff;
+  border-color: #fff;
+  color: #f27126;
+  padding: 6% 18%;
+  border: 3px #fff solid;
+  cursor: pointer;
+
+}
+
+#servicesTextButtonContainer .get-started:hover {
+  background: #f27126;
+  color: #fff;
+}
+
+#servicesTextButtonContainer .serviceButtonPosition {
+  margin: 8% 0;
+}
+
+#servicesTextButtonContainer .serviceButtonPosition:first-of-type {
+  margin-top: 8%;
+}
+
+
+
+/* #servicesDescriptionContainer .row {
   background: #f27126;
 }
 
@@ -52,14 +132,12 @@
 
 #servicesDescriptionContainer .row h3 {
   font-family: "Oswald-SemiBold", arial, sans-serif;
-  /* letter-spacing: 0.05em; */
   color: #fff;
   font-size: 1.8em;
 }
 
 #servicesDescriptionContainer .row h4 {
   font-family: "Oswald-SemiBold", arial, sans-serif;
-  /* letter-spacing: 0.05em; */
   color: #fff;
   font-size: 1.1em;
 }
@@ -79,7 +157,6 @@
    margin: 10px 0;
 }
 
-/******/
 #servicesDescriptionContainer .description-mid .headerDivider {
   border-right: 2px solid #f27126;
   height: 80px;
@@ -135,9 +212,6 @@
   color: #fff;
   text-align: center;
   padding: .5rem .75rem;
-  /* font-family: "Oswald-Medium", arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 600; */
 }
 
 #servicesDescriptionContainer .services-button:hover {
@@ -158,7 +232,7 @@
 }
 #servicesDescriptionContainer .green {
   background-color: green;
-}
+} */
 
 
 /******************************/
