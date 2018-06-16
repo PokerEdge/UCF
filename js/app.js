@@ -366,9 +366,8 @@
       $conditioning.show();
 
       //Reset page HEIGHT
+      // TODO: Stlye height in CSS such that container flows around calendar
       $('#calendarContainer').css({"height":"422vh"});
-
-      console.log('Show all');
 
     } else {
       // Close filter dropdown menu
@@ -382,7 +381,7 @@
 
     }
 
-    //STYLE UNOCCUPIED TABLE CELLS AFTER FILTERING
+    // TODO: STYLE UNOCCUPIED TABLE CELLS AFTER FILTERING
 
   //   const $tableCells = $('.users td');
   //   const tableArr = [];
@@ -406,8 +405,28 @@
   //$('.users tbody').children().children().text();
 
 
-  // HIDE CALENDAR DROPDOWN WHEN LINK IS CLICKED
+  // TODO: HIDE CALENDAR DROPDOWN WHEN LINK IS CLICKED
     // TAKE FILTER ACTION TO HIDE ALL BUT CLICKED LINK ITEM IN DROPDOWN
+
+  // Pagination active style application
+  $('.page-link').on('click', function(){
+    if( $(this).hasClass('page-previous') || $(this).hasClass('page-next') ) {
+      // TODO: check if next button
+        // Check if there is a next page
+          // Fire next page function if there is a previous page
+
+
+      // TODO: check if previous button
+        // Check if there is a previous page
+          // Fire previous page function if there is a previous page
+
+
+    } else {
+      $('.page-link').removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+
 
 
   //Manage navigation placement when alert is closed
@@ -415,22 +434,11 @@
     $('#nav-container').css({"margin-bottom":"14px"});
   });
 
-  // TODO: Curtail title with JavaScript to maintain scalable style.
-
   const archiveListItemTitle = document.getElementsByClassName('archiveListItemTitle');
 
   for(let i = 0; i < archiveListItemTitle.length; i++){
     document.getElementsByClassName('archiveListItemTitle')[i].innerText = document.getElementsByClassName('archiveListItemTitle')[i].innerText.split(' ').slice(0,5).join(' ').concat('...');
   }
-  //
-  // let archiveListItemTitle = [];
-  //
-  // for()
-  // $('.archiveListItemTitle').length;
-  //
-  // for(let i = 0; i < archiveListItemTitle.length; i++){
-  //   document.getElementsByClassName('archiveListItemTitle')[i].innerText = document.getElementsByClassName('archiveListItemTitle')[i].innerText.split(' ').slice(0,15).join(' ').concat('...');
-  // }
 
   //Array to populate "Forging Elite" tagline (Final element gets new style)
   const eliteArr = [

@@ -1,0 +1,93 @@
+/*******************************/
+/***** ARCHIVE AREA STYLES *****/
+/*******************************/
+
+#archiveContainer {
+  width: 100%;
+  height: auto;
+
+  /* TODO: edit background-color to #f27126 */
+  background-color: #f27126;
+  color: #fff;
+  font-family: "Oswald-Medium", arial, sans-serif;
+  overflow-y: hidden;
+  padding-bottom: 6%;
+}
+
+#archiveContainer .athleteServiceChoiceContainer {
+  border: 3px #fff solid;
+  height: 300px;
+}
+
+#archiveContainer .athleteServicesHeaderText {
+  font-family: "Gobold-Bold-Italic", arial, sans-serif;
+  font-size: 3em;
+
+  margin: 6% 0;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#archiveContainer .servicesGallery {
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#archiveContainer .servicesGalleryHeaderText {
+  font-size: 2em;
+  text-shadow: 1px 2px 2px #333;
+  margin-top: 20px;
+  /* Push button and link down due to odd anchor tag position inside of image */
+  margin-bottom: 160px;
+}
+
+#archiveContainer .crossfitService {
+  max-width: 29.33333333%;
+  margin: 0 3%;
+  background: #f27126 url(../img/optimization_tinyjpg/compressed/crossfit-home-page.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+
+#archiveContainer .conditioningService {
+  max-width: 29.33333333%;
+  margin-right: 3%;
+  background: #f27126 url(../img/optimization_tinyjpg/compressed/conditioning-home-page.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+
+#archiveContainer .personalTrainingService {
+  max-width: 29.33333333%;
+  margin-right: 3%;
+  background: #f27126 url(../img/optimization_tinyjpg/compressed/personal-training-home-page.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+
+#archiveContainer .get-started {
+  letter-spacing: 0.05em;
+  background: #fff;
+  border-color: #fff;
+  color: #f27126;
+}
+
+#archiveContainer .get-started:hover {
+  background: #f27126;
+  color: #fff;
+}
+
+
+.pagination-nav {
+  align-content: center;
+}
+
+.page-link, .page-link:hover, .page-link:visited {
+  color: #f27126;
+  cursor: pointer;
+}
+
+.page-link.active {
+  background: #f27126;
+  color: #fff;
+}
