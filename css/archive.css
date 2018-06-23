@@ -136,17 +136,21 @@
   color: #fff;
 }
 
-
 .pagination-nav {
   align-content: center;
 }
 
 .page-link, .page-link:hover, .page-link:visited {
-  color: #f27126;
+  color: #6d6e70;
+  border-color: #6d6e70;
   cursor: pointer;
 }
 
 .page-link.active {
-  background: #f27126;
+  background: #6d6e70;
   color: #fff;
+}
+
+.pagination-icon {
+  color: #6d6e70;
 }
