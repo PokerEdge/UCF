@@ -792,7 +792,7 @@ button.close span:hover {
 /********************************/
 /***** DAILY WORKOUT STYLES *****/
 /********************************/
-.wodBox {
+/* .wodBox {
   height: 36vh;
   width: 260px;
   margin-top: 40px;
@@ -824,20 +824,19 @@ button.close span:hover {
   background-color: lightblue;
   overflow: hidden;
 
-  /*TEST HEIGHT*/
-  height: 100%;
-}
+  /*TEST HEIGHT
+  height: 100%;*/
 
-#wodsContainer .col-1 {
+/* #wodsContainer .col-1 {
   background-color: purple;
 }
 
 #wodsContainer .col-10 {
   background-color: lightblue;
-}
+} */
 
 /*Nested row 1*/
-#wodsContainer .red {
+/* #wodsContainer .red {
   background-color: red;
 }
 
@@ -855,14 +854,14 @@ button.close span:hover {
 
 #wodsContainer .tan {
   background-color: tan;
-}
+} */
 
 
 /**************************************
 ****** BONUS CONTENT AREA STYLES ******
 **************************************/
 
-#bonusServicesContainer {
+/* #bonusServicesContainer {
   width: 100%;
   color: #fff;
 }
@@ -903,7 +902,7 @@ button.close span:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 /*******************************
 ****** FOOTER AREA STYLES ******
@@ -991,11 +990,13 @@ button.close span:hover {
 
   #pitContainer {
     width: 100%;
-    height: 72vh;
+    /* height: 72vh; */
+    height: 630px;
   }
 
   #pitContainer .pit-button-placement {
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
+    padding-top: 43.8;
   }
 
   #pitContainer .pit-button {
@@ -1003,16 +1004,19 @@ button.close span:hover {
   }
 
   #pitContainer .pit-text h1 {
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+    margin-top: 87.5px;
     font-size: 3em;
   }
 
   #pitContainer .training-text h2 {
-    margin-top: 2vh;
-    margin: 1.5vh;
+    /* margin-top: 2vh; */
+    margin-top: 17.5px;
+    /* margin: 1.5vh; */
+    margin: 13.1px;
     line-height: 1.2;
     font-size: 1.75em;
-    background: rgba(242,113,38,0.9);
+    /* background: rgba(242,113,38,0.9); */
     color: #fff;
     font-family: "Gobold-Bold-Italic", arial, sans-serif;
   }
@@ -1021,14 +1025,15 @@ button.close span:hover {
 @media (min-width: 0px) and (max-width: 768px) {
 
   #dailyWorkoutsContainer {
-    height: 84vh;
+    /* height: 84vh; */
+    height: 626px;
   }
 
   #dailyWorkoutsContainer .workoutButton {
     margin-top: 0.75em;
   }
 
-  #plansContainer {
+  /* #plansContainer {
     height: 128vh;
   }
 
@@ -1056,14 +1061,16 @@ button.close span:hover {
 
   #plansContainer .planText {
     font-size: 0.85em;
-  }
+  } */
 
   #pitContainer {
-    height: 72vh;
+    /* height: 72vh; */
+    height: 630px;
   }
 
   #pitContainer .pit-button-placement {
-    padding-top: 4vh;
+    /* padding-top: 4vh; */
+    padding-top: 35px;
   }
 
   #pitContainer .pit-button {
@@ -1071,17 +1078,20 @@ button.close span:hover {
   }
 
   #pitContainer .pit-text h1 {
-    margin-top: 12vh;
+    /* margin-top: 12vh; */
+    margin-top: 105px;
     font-size: 2.5em;
     padding: 2%;
   }
 
   #pitContainer .training-text h2 {
-    margin-top: 2vh;
-    margin: 1.5vh;
+    /* margin-top: 2vh; */
+    margin-top: 17.5px;
+    /* margin: 1.5vh; */
+    margin: 13.2px;
     line-height: 1.2;
     font-size: 1.5em;
-    background: rgba(242,113,38,0.9);
+    /* background: rgba(242,113,38,0.9); */
     color: #fff;
     font-family: "Gobold-Bold-Italic", arial, sans-serif;
   }
@@ -1095,7 +1105,7 @@ button.close span:hover {
   }
 
   #footerContainer .copyright-text {
-    font-size: .7em;
+    font-size: 0.7em;
   }
 
   #footerContainer .fa-2x {
@@ -1109,7 +1119,8 @@ button.close span:hover {
 @media (min-width: 0px) and (max-width: 560px) {
 
   #dailyWorkoutsContainer {
-    height: 76vh;
+    /* height: 76vh; */
+    height: 554px;
   }
 
   #dailyWorkoutsContainer h1 {
@@ -1133,7 +1144,8 @@ button.close span:hover {
 @media (min-width: 301px) and (max-width: 560px) {
 
   #dailyWorkoutsContainer {
-    height: 96vh;
+    /* height: 96vh; */
+    height: 700px;
   }
 
   #dailyWorkoutsContainer h1 {
@@ -1167,7 +1179,8 @@ button.close span:hover {
 @media (min-width: 0px) and (max-width: 300px) {
 
   #dailyWorkoutsContainer {
-    height: 86vh;
+    /* height: 86vh; */
+    height: 627px;
   }
 
   #dailyWorkoutsContainer h1 {
@@ -1190,7 +1203,8 @@ button.close span:hover {
 @media (min-width: 550px) and (max-width: 700px) {
 
   #heroContainer {
-		height: 60vh;
+		/* height: 60vh; */
+    height: 429;
 	}
 
   #heroContainer h1 {
@@ -1198,12 +1212,14 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 17vh;
+    /* padding-top: 17vh; */
+    padding-top: 121.4px;
   }
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 8vh;
+    /* padding-top: 8vh; */
+    padding-top: 57px;
   }
 
   #heroContainer .get-started,
@@ -1215,15 +1231,18 @@ button.close span:hover {
   }
 
   #pitContainer {
-    height: 62vh;
+    /* height: 62vh; */
+    height: 542.5px;
   }
 
   #pitContainer .pit-button-placement {
-    padding-top: 4vh;
+    /* padding-top: 4vh; */
+    padding-top: 35px;
   }
 
   #pitContainer .pit-text h1 {
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+    margin-top: 87.5px;
     font-size: 2.4em;
   }
 
@@ -1232,7 +1251,9 @@ button.close span:hover {
   }
 
   #trainingContainer {
-    height: 80vh;
+    /* height: 80vh; */
+    /* height: 594px; */
+    height: 485px;
   }
 
   #trainingContainer .training-button-placement {
@@ -1240,14 +1261,18 @@ button.close span:hover {
   }
 
   #trainingContainer .training-text h1 {
-    margin-top: 8vh;
-    padding: 1.5vh;
+    /* margin-top: 8vh; */
+    margin-top: 59.4px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 3em;
   }
 
   #trainingContainer .training-text h2 {
-    margin-top: 3vh;
-    padding: 1.5vh;
+    /* margin-top: 3vh; */
+    margin-top: 22.3px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 1.5em;
   }
 
@@ -1261,7 +1286,8 @@ button.close span:hover {
   }
 
   #heroContainer {
-		height: 50vh;
+		/* height: 50vh; */
+    height: 357.2px;
 	}
 
   #heroContainer h1 {
@@ -1269,12 +1295,14 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 14vh;
+    /* padding-top: 14vh; */
+    padding-top: 100px;
   }
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 5vh;
+    /* padding-top: 5vh; */
+    padding-top: 36px;
   }
 
   #heroContainer .get-started,
@@ -1287,15 +1315,18 @@ button.close span:hover {
 
 
   #pitContainer {
-    height: 62vh;
+    /* height: 62vh; */
+    height: 542.5px;
   }
 
   #pitContainer .pit-button-placement {
-    padding-top: 4vh;
+    /* padding-top: 4vh; */
+    padding-top: 35px;
   }
 
   #pitContainer .pit-text h1 {
-    margin-top: 6vh;
+    /* margin-top: 6vh; */
+    margin-top: 52.5px;
     font-size: 2em;
   }
 
@@ -1305,7 +1336,8 @@ button.close span:hover {
 
 
   #trainingContainer {
-    height: 70vh;
+    /* height: 70vh; */
+    height: 520px;
   }
 
   #trainingContainer .training-button-placement {
@@ -1313,14 +1345,18 @@ button.close span:hover {
   }
 
   #trainingContainer .training-text h1 {
-    margin-top: 8vh;
-    padding: 1.5vh;
+    /* margin-top: 8vh; */
+    margin-top: 59.4px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 2.6em;
   }
 
   #trainingContainer .training-text h2 {
-    margin-top: 2vh;
-    padding: 1.5vh;
+    /* margin-top: 2vh; */
+    margin-top: 14.9px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 1.3em;
   }
 
@@ -1334,7 +1370,7 @@ button.close span:hover {
   }
 
   .sub-menu .menu-title {
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   .sub-menu-items {
@@ -1353,7 +1389,8 @@ button.close span:hover {
     }
 
   #heroContainer {
-		height: 40vh;
+		/* height: 40vh; */
+    height: 285.72px;
 	}
 
   #heroContainer h1 {
@@ -1361,7 +1398,8 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 12vh;
+    /* padding-top: 12vh; */
+    padding-top: 85.7px;
   }
 
   #alertContainer{
@@ -1370,7 +1408,8 @@ button.close span:hover {
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 3vh;
+    /* padding-top: 3vh; */
+    padding-top: 21.4px;
   }
 
   #heroContainer .get-started,
@@ -1382,15 +1421,18 @@ button.close span:hover {
   }
 
   #pitContainer {
-    height: 62vh;
+    /* height: 62vh; */
+    height: 542.5px;
   }
 
   #pitContainer .pit-button-placement {
-    padding-top: 2vh;
+    /* padding-top: 2vh; */
+    padding-top: 17.5px;
   }
 
   #pitContainer .pit-text h1 {
-    margin-top: 8vh;
+    /* margin-top: 8vh; */
+    margin-top: 70px;
     font-size: 1.8em;
   }
 
@@ -1398,7 +1440,7 @@ button.close span:hover {
     font-size: 1em;
   }
 
-  #plansContainer {
+  /* #plansContainer {
     height: 128vh;
   }
 
@@ -1434,10 +1476,11 @@ button.close span:hover {
 
   #plansContainer .get-started:hover {
     margin-top: 1.6vh;
-  }
+  } */
 
   #trainingContainer {
-    height: 65vh;
+    /* height: 65vh; */
+    height: 483px;
   }
 
   #trainingContainer .training-button-placement {
@@ -1445,15 +1488,19 @@ button.close span:hover {
   }
 
   #trainingContainer .training-text h1 {
-    margin-top: 7vh;
-    padding: 1.5vh;
+    /* margin-top: 7vh; */
+    margin-top: 52px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 2em;
     background-color: rgba(255,255,255,0.85);
   }
 
   #trainingContainer .training-text h2 {
-    margin-top: 1.5vh;
-    padding: 1.5vh;
+    /* margin-top: 1.5vh; */
+    margin-top: 11.2px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 1em;
     background-color: rgba(255,255,255,0.85);
   }
@@ -1487,7 +1534,8 @@ button.close span:hover {
     }
 
   #heroContainer {
-		height: 30vh;
+		/* height: 30vh; */
+    height: 214.3px;
 	}
 
   #heroContainer h1 {
@@ -1495,7 +1543,8 @@ button.close span:hover {
 	}
 
   .lightText {
-    padding-top: 8vh;
+    /* padding-top: 8vh; */
+    padding-top: 57px;
   }
 
   #alertContainer{
@@ -1504,7 +1553,8 @@ button.close span:hover {
 
   #heroContainer .place-hero-button-start,
   #heroContainer .place-hero-button-learn {
-    padding-top: 2vh;
+    /* padding-top: 2vh; */
+    padding-top: 14.3px;
   }
 
   #heroContainer .get-started,
@@ -1516,15 +1566,18 @@ button.close span:hover {
   }
 
   #pitContainer {
-    height: 62vh;
+    /* height: 62vh; */
+    height: 542.5px;
   }
 
   #pitContainer .pit-button-placement {
-    padding-top: 4vh;
+    /* padding-top: 4vh; */
+    padding-top: 35px;
   }
 
   #pitContainer .pit-text h1 {
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+    margin-top: 87.5px;
     font-size: 1.6em;
   }
 
@@ -1533,7 +1586,7 @@ button.close span:hover {
   }
 
 
-  #plansContainer {
+  /* #plansContainer {
     height: 128vh;
   }
 
@@ -1569,11 +1622,12 @@ button.close span:hover {
 
   #plansContainer .get-started:hover {
     margin-top: 1vh;
-  }
+  } */
 
 
   #trainingContainer {
-    height: 65vh;
+    /* height: 65vh; */
+    height: 483px;
   }
 
   #trainingContainer .training-button-placement {
@@ -1581,15 +1635,19 @@ button.close span:hover {
   }
 
   #trainingContainer .training-text h1 {
-    margin-top: 5vh;
-    padding: 1.5vh;
+    /* margin-top: 5vh; */
+    margin-top: 37.1px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 1.8em;
     background-color: rgba(255,255,255,0.85);
   }
 
   #trainingContainer .training-text h2 {
-    margin-top: 1.2vh;
-    padding: 1.5vh;
+    /* margin-top: 1.2vh; */
+    margin-top: 8.9px;
+    /* padding: 1.5vh; */
+    padding: 11.2px;
     font-size: 0.9em;
     line-height: 1.3;
     background-color: rgba(255,255,255,0.85);
