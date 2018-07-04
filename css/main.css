@@ -293,8 +293,11 @@ button.close span:hover {
 /****************************/
 /***** HERO AREA STYLES *****/
 /****************************/
+
+/* TODO: Change all vh to px (even in media queries): px to vh ratio is 7.143 */
 #heroContainer {
-  height: 70vh;
+  /* height: 70vh; */
+  height: 500px;
   width: 100%;
 
   /* Background with fallbacks */
@@ -313,7 +316,8 @@ button.close span:hover {
 
 #heroContainer .place-hero-button-start,
 #heroContainer .place-hero-button-learn {
-  padding-top: 9vh;
+  /* padding-top: 9vh; */
+  padding-top: 64px;
 }
 
 #heroContainer .get-started {
@@ -350,7 +354,8 @@ button.close span:hover {
 }
 
 .lightText {
-  padding-top: 20vh;
+  /* padding-top: 20vh; */
+  padding-top: 143px;
   text-align: center;
   color: rgba(255,255,255,0.95);
 }
@@ -364,10 +369,11 @@ button.close span:hover {
 /***** DAILY WORKOUTS AREA *****/
 /*******************************/
 
+/* TODO: Change all vh to px (even in media queries): px to vh ratio is 7.292 */
 #dailyWorkoutsContainer {
   width: 100%;
-  /* TODO: Fix vh issue - height not being auto causes element misalignment */
-  height: 72vh;
+  /* height: 72vh; */
+  height: 525px;
   overflow: hidden;
   padding: 4% 0 2%;
   background-color: #f27126;
@@ -409,7 +415,8 @@ button.close span:hover {
 }
 
 #dailyWorkoutsContainer .workoutDescription {
-  margin-top: 2vh;
+  /* margin-top: 2vh; */
+  margin-top: 14.6px;
 }
 
 #dailyWorkoutsContainer h3 {;
@@ -571,11 +578,10 @@ button.close span:hover {
 /***** ATHLETE SERVICES AREA STYLES FOR HOME PAGE *****/
 /******************************************************/
 
+/* TODO: Change all vh to px */
 #athleteServicesContainer {
   width: 100%;
   height: auto;
-
-  /* TODO: edit background-color to #f27126 */
   background-color: #f27126;
   color: #fff;
   font-family: "Oswald-Medium", arial, sans-serif;
@@ -652,9 +658,11 @@ button.close span:hover {
 /***** TRAINING AREA STYLES *****/
 /********************************/
 
+/* TODO: Change all vh to px (even in media queries): px to vh ratio is 7.429*/
 #trainingContainer {
   width: 100%;
-  height: 70vh;
+  /* height: 70vh; */
+  height: 520px;
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
   background-color: #f27126;
   color: #fff;
@@ -667,7 +675,8 @@ button.close span:hover {
 }
 
 #trainingContainer .training-button-placement {
-  padding-top: 7vh;
+  /* padding-top: 7vh; */
+  padding-top: 52px;
 }
 
 #trainingContainer .training-button {
@@ -690,8 +699,10 @@ button.close span:hover {
 }
 
 #trainingContainer .training-text h1 {
-  margin-top: 10vh;
-  padding: 1.5vh;
+  /* margin-top: 10vh; */
+  margin-top: 74.3px;
+  /* padding: 1.5vh; */
+  padding: 11.1px;
   font-size: 4em;
   background: rgba(255,255,255,0.8);
   color: #f27126;
@@ -699,8 +710,10 @@ button.close span:hover {
 }
 
 #trainingContainer .training-text h2 {
-  margin-top: 4vh;
-  padding: 1.5vh;
+  /* margin-top: 4vh; */
+  margin-top: 29.7px;
+  /* padding: 1.5vh; */
+  padding: 11.1px;
   line-height: 1.2;
   font-size: 1.75em;
   background: rgba(255,255,255,0.8);
@@ -712,9 +725,11 @@ button.close span:hover {
 /***************************/
 /***** PIT AREA STYLES *****/
 /***************************/
+/* TODO: Change all vh to px (even in media queries): px to vh ratio is 8.75 */
 #pitContainer {
   width: 100%;
-  height: 80vh;
+  /* height: 80vh; */
+  height: 720px;
   background-color: #f27126;
   background: url(../img/pit-image.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
@@ -725,7 +740,8 @@ button.close span:hover {
 }
 
 #pitContainer .pit-button-placement {
-  padding-top: 6vh;
+  /* padding-top: 6vh; */
+  padding-top: 52.5px;
 }
 
 #pitContainer .pit-button {
@@ -733,33 +749,42 @@ button.close span:hover {
   font-weight: 600;
   border-width: 3px;
   padding: 15px 60px 15px;
-  background-color: #f27126;
-  border-color: #f27126;
-  color: #fff;
+  /* background-color: #f27126; */
+  background-color: #fff;
+  /* border-color: #f27126; */
+  border-color: #fff;
+  color: #6d6e70;
   transition: 0.25s;
 }
 
 #pitContainer .pit-button:hover {
-  background-color: #fff;
+  background-color: #6d6e70;
   border-color: #fff;
-  color: #f27126;
+  /* color: #f27126; */
+  color: #fff;
 }
 
 #pitContainer .pit-text h1 {
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
+  margin-top: 87.5px;
   font-size: 4em;
   color: #fff;
-  background: rgba(242,113,38,0.9);
+  /* background: rgba(242,113,38,0.9); */
+  background: rgba(109,110,112,0.9);
   font-family: "Gobold-Bold-Italic", arial, sans-serif;
-  padding: 1.5vh
+  /* padding: 1.5vh; */
+  padding: 13.1px;
 }
 
 #pitContainer .training-text h2 {
-  margin-top: 28vh;
-  padding: 1.5vh;
+  /* margin-top: 28vh; */
+  margin-top: 220px;
+  /* padding: 1.5vh; */
+  padding: 13.1px;
   line-height: 1.2;
   font-size: 1.75em;
-  background: rgba(242,113,38,0.9);
+  /* background: rgba(242,113,38,0.9); */
+  background: rgba(109,110,112,0.9);
   color: #fff;
   font-family: "Oswald-Medium", arial, sans-serif;
 }
@@ -883,7 +908,7 @@ button.close span:hover {
 /*******************************
 ****** FOOTER AREA STYLES ******
 *******************************/
-
+/* TODO: Change all vh to px (even in media queries): px to vh ratio is 6.67 */
 #footerContainer {
   width: 100%;
   height: auto;
@@ -902,12 +927,14 @@ button.close span:hover {
 
 #footerContainer .fa-2x {
   font-size: 1.5em;
-  margin-top: 3vh;
+  /* margin-top: 3vh; */
+  margin-top: 20px;
   padding-right: 3.5%;
 }
 
 #footerContainer .copyright-text {
-  margin-top: 1vh;
+  /* margin-top: 1vh; */
+  margin-top: 6.7px;
   font-size: 0.8em;
   color: rgba(0,0,0,0.5)
 }

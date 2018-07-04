@@ -63,6 +63,7 @@ padding: 1em; */
 
 #servicesTextButtonContainer .colButtonStyle {
   background: rgba(255,255,255,0.1);
+  /* background: #6d6e70; */
   text-align: center;
   margin: 0 2.5%;
   max-width: 45%;
