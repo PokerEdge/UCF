@@ -22,7 +22,7 @@
 #servicesContainer h2 {
   font-size: 2.5em;
   font-family: "Oswald-Medium", arial, sans-serif;
-  padding-top: 4vh;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -243,17 +243,20 @@ padding: 1em; */
 @media (min-width: 576px) and (max-width: 768px) {
 
   #servicesContainer {
-    height: 40vh;
+    /* height: 40vh; */
+    height: 400px;
   }
 
   #servicesContainer h1 {
     font-size: 4em;
-    padding-top: 12vh;
+    /* padding-top: 12vh; */
+    padding-top: 120px;
   }
 
   #servicesContainer h2 {
     font-size: 1.67em;
-    padding-top: 3vh;
+    /* padding-top: 3vh; */
+    padding-top: 30px;
   }
 
 }
@@ -261,17 +264,20 @@ padding: 1em; */
 @media (min-width: 350px) and (max-width: 575px) {
 
   #servicesContainer {
-    height: 30vh;
+    /* height: 30vh; */
+    height: 300px;
   }
 
   #servicesContainer h1 {
     font-size: 3em;
-    padding-top: 9vh;
+    /* padding-top: 9vh; */
+    padding-top: 90px;
   }
 
   #servicesContainer h2 {
     font-size: 1.25em;
-    padding-top: 2vh;
+    /* padding-top: 2vh; */
+    padding-top: 20px;
   }
 
 }
@@ -279,17 +285,20 @@ padding: 1em; */
 @media (min-width: 0px) and (max-width: 349px) {
 
   #servicesContainer {
-    height: 20vh;
+    /* height: 20vh; */
+    height: 200px;
   }
 
   #servicesContainer h1 {
     font-size: 2em;
-    padding-top: 6vh;
+    /* padding-top: 6vh; */
+    padding-top: 60px;
   }
 
   #servicesContainer h2 {
     font-size: 1em;
-    padding-top: 1.5vh;
+    /* padding-top: 1.5vh; */
+    padding-top: 15px;
   }
 
 }
