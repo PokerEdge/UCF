@@ -163,9 +163,11 @@
         </div>
 
         <!-- TODO: Edit area (down to a single row?) so that elements respond fluidly -->
-        <div class="row servicesGallery">
 
-          <div class="col-lg-4 athleteServiceChoiceContainer crossfitService">
+        <!-- 3 col-4 images that display on all viewport sizes -->
+        <!-- <div class="row servicesGallery">
+
+          <div class="col-lg-4 col-6 athleteServiceChoiceContainer crossfitService">
             <h2 class="servicesGalleryHeaderText">Crossfit</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
@@ -173,7 +175,7 @@
             </a>
           </div>
 
-          <div class="col-lg-4 athleteServiceChoiceContainer conditioningService">
+          <div class="col-lg-4 col-6 athleteServiceChoiceContainer conditioningService">
             <h2 class="servicesGalleryHeaderText">Conditioning</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
@@ -181,7 +183,7 @@
             </a>
           </div>
 
-          <div class="col-lg-4 athleteServiceChoiceContainer personalTrainingService">
+          <div class="col-lg-4 col-6 athleteServiceChoiceContainer personalTrainingService">
             <h2 class="servicesGalleryHeaderText">Crossfit</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
@@ -194,7 +196,7 @@
 
         <div class="row servicesGallery">
 
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12 athleteServiceChoiceContainer crossfitService">
+          <div class="col-lg-4 col-md-6 col-sm-4 col-12 athleteServiceChoiceContainer crossfitService">
             <h2 class="servicesGalleryHeaderText">Crossfit</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
@@ -202,7 +204,19 @@
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12 athleteServiceChoiceContainer conditioningService">
+          <div class="col-lg-4 col-md-6 col-sm-4 col-12 athleteServiceChoiceContainer conditioningService">
+            <h2 class="servicesGalleryHeaderText">Conditioning</h2>
+            <h3 class="servicesGalleryDate">June 16, 2018<h3>
+            <a href="#">
+              <button type="button" class="btn btn-dark get-started">Read More</button>
+            </a>
+          </div>
+      -->
+
+          <!-- Force next columns to break to new line at md breakpoint and up -->
+          <!-- <div class="w-100 d-none d-md-block"></div>
+
+          <div class="col-lg-4 col-md-6 col-sm-4 col-12 athleteServiceChoiceContainer personalTrainingService">
             <h2 class="servicesGalleryHeaderText">Conditioning</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
@@ -210,67 +224,175 @@
             </a>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 col-12 athleteServiceChoiceContainer personalTrainingService">
-            <h2 class="servicesGalleryHeaderText">Conditioning</h2>
+        </div> -->
+
+
+
+        <!-- Visible on medium viewport width only -->
+        <!-- TODO: Fix stacking - display inline with proper padding: servicesGallery -->
+        <!-- <div class="row servicesGallery d-none d-md-inline d-lg-none">
+          <div class="col-sm-6 athleteServiceChoiceContainer crossfitService">
+            <h2 class="servicesGalleryHeaderText">Medium 1</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
               <button type="button" class="btn btn-dark get-started">Read More</button>
             </a>
           </div>
 
-        </div>
-
-
-        <div class="row servicesGallery">
-
-          <div class="col-sm-12 col-12 athleteServiceChoiceContainer">
-            <h2 class="servicesGalleryHeaderText">Crossfit</h2>
+          <div class="col-sm-6 athleteServiceChoiceContainer conditioningService">
+            <h2 class="servicesGalleryHeaderText">Medium 2</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
               <button type="button" class="btn btn-dark get-started">Read More</button>
             </a>
           </div>
+        </div> -->
 
-        </div>
+        <!-- Hidden on lg and xl -->
+        <!-- <div class="d-lg-none row servicesGallery">
 
-        <div class="row servicesGallery">
-
-          <div class="col-sm-12 col-12 athleteServiceChoiceContainer">
-            <h2 class="servicesGalleryHeaderText">Crossfit</h2>
+          <div class="col-12 athleteServiceChoiceContainer">
+            <h2 class="servicesGalleryHeaderText">Hidden lg + xl</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
               <button type="button" class="btn btn-dark get-started">Read More</button>
             </a>
           </div>
-
-        </div>
-
-        <div class="row servicesGallery">
-
-          <div class="col-sm-12 col-12 athleteServiceChoiceContainer">
-            <h2 class="servicesGalleryHeaderText">Crossfit</h2>
-            <h3 class="servicesGalleryDate">June 16, 2018<h3>
-            <a href="#">
-              <button type="button" class="btn btn-dark get-started">Read More</button>
-            </a>
-          </div>
-
         </div>
 
         <div class="row servicesGallery">
 
           <div class="col-sm-12 col-12 athleteServiceChoiceContainer">
-            <h2 class="servicesGalleryHeaderText">Crossfit</h2>
+            <h2 class="servicesGalleryHeaderText">Large: all sizes</h2>
             <h3 class="servicesGalleryDate">June 16, 2018<h3>
             <a href="#">
               <button type="button" class="btn btn-dark get-started">Read More</button>
             </a>
           </div>
 
+        </div> -->
+
+        <!-- TODO: Redo gallery with cards -->
+        <div class="row">
+          <div class="card card-spacing w-25">
+            <div class="card-body card-styling">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text .card-text-styles">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam rem sint, in amet, fugit blanditiis.</p>
+              <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+            </div>
+          </div>
         </div>
+
+          <div class="row">
+
+            <div class="card card-spacing col-6">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+
+            <div class="card card-spacing col-6">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="card-columns">
+
+            <!-- 1 -->
+            <div class="card">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+              <!-- <div class="card bg-primary"> -->
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+              <!-- <div class="card bg-primary"> -->
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+              <!-- <div class="card bg-primary"> -->
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+              <!-- <div class="card bg-primary"> -->
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="card">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+              <!-- <div class="card bg-primary"> -->
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card">
+              <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+              <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">Last updated 3 mins ago</p>
+                <a href="#" class="btn btn-primary card-button">Type of Exercise</a>
+              </div>
+            </div>
+            <!-- <img class="card-img card-styling" src="img/optimization_tinyjpg/compressed/crossfit-home-page.jpg" alt="Card image">
+            <div class="card-img-overlay">
+              <div class="card-body text-center">
+                <p class="card-text">Some text inside the sixth card</p>
+              </div>
+            </div> -->
+
+          </div>
+
+
+
 
         <!-- PAGINATION ELEMENTS -->
-        <!-- TODO: Change previous and next icons to branded versions -->
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
             <li class="page-item">

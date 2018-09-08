@@ -23,37 +23,47 @@
   const $conditioning = $('.class-conditioning');
   const $showAll = $('#showAll');
 
+  const $hamburgler = $('.hamburgler');
+  const $subMenu = $('.sub-menu');
+  const $menuItem = $('.menu-item');
+
+  // Open contact links in new tab or window on click
+  const $contactLink = $('.contact-link');
+
+  // Open get started links in new tab or window on click
+  const $getStarted = $('.get-started');
+
   //Add formated current date to top of calendar message
   const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const date = new Date().toLocaleString('en-US', dateOptions);
   $('#currentDate').append(date);
 
-  const numbericDateOptions = { weekday: 'long', month: 'short', day: 'numeric' }
-  const numericDate = new Date().toLocaleString('en-US', numbericDateOptions)
+  const numericDateOptions = { weekday: 'long', month: 'short', day: 'numeric' }
+  const numericDate = new Date().toLocaleString('en-US', numericDateOptions)
 
   const eachDateText = document.getElementsByClassName('numericDate');
   for(let i = 0; i < eachDateText.length; i++){
     eachDateText[i].innerText = numericDate;
   }
   //Toggle active class in navigation bar (and style it)
-  $('.menu-item').on('click', function(){
+  $menuItem.on('click', function(){
 
-    if( $('.menu-item').hasClass('active') ){
-      $('.menu-item').removeClass('active');
+    if( $menuItem.hasClass('active') ){
+      $menuItem.removeClass('active');
     }
 
     $(this).toggleClass('active');
   });
 
   //Animate hamburger and toggle showing of sub-navigation menu
-  $('.hamburgler').click(function(e){
+  $hamburgler.click(function(e){
 		e.preventDefault();
 		$(this).toggleClass('no-hamburgler');
 
     if( $(this).hasClass('no-hamburgler') ){
-      $('.sub-menu').css({"width":"100%","right":"0%"});
+      $subMenu.css({"width":"100%","right":"0%"});
     } else{
-      $('.sub-menu').css({"width":"0%","right":"-100%"});
+      $subMenu.css({"width":"0%","right":"-100%"});
     }
 	});
 
@@ -62,8 +72,8 @@
   $window.resize(function() {
 
     if ( $window.width() >= 768 ) {
-      $('.hamburgler').removeClass('no-hamburgler');
-      $('.sub-menu').css({"width":"0%", "right":"-100%"});
+      $hamburgler.removeClass('no-hamburgler');
+      $subMenu.css({"width":"0%", "right":"-100%"});
     }
 
     // if ( $window.width() <= 530 ) {
@@ -76,8 +86,7 @@
     // }
   });
 
-  // Open contact links in new tab or window on click
-  const $contactLink = $('.contact-link');
+  
 
   $contactLink.each(function() {
    var a = new RegExp('/' + window.location.host + '/');
@@ -89,10 +98,7 @@
        });
     }
   });
-
-  const $getStarted = $('.get-started');
-
-  // Open get started links in new tab or window on click
+  
   $getStarted.each(function() {
    var a = new RegExp('/' + window.location.host + '/');
    if(!a.test(this.href)) {
@@ -108,103 +114,101 @@
   **** MANAGE DROPDOWN MENU ACTIONS ****
   *************************************/
 
+ const $dropdownMenu = $('.dropdown-menu');
+ const $dropdownToggle = $('.dropdown-toggle');
+ const $faCaretDown = $('.fa-caret-down');
+ 
+ const $calendarDropdownToggle = $('.calendar-dropdown-toggle');
+ const $calendarCaret = $('.calendar-caret');
+ const $calendarDropdownMenu = $('.calendar-dropdown-menu');
+ const $calendarFaCaretDown = $('.calendar-fa-caret-down');
+ const $calendarDropdownItem = $('.calendar-dropdown-item')
+ 
+  
   //IF MOUSE OVER OTHER MENU-ITEM REMOVE HOVER STYLE
-  $('.menu-item').on('mouseover', function(){
-    $('.dropdown-menu').removeClass('show');
-    $('.fa-caret-down').removeClass('caret-hover');
-    $('.dropdown-toggle').css({"color": "rgba(0, 0, 0, 0.5)"});
+  $menuItem.on('mouseover', function(){
+    $dropdownMenu.removeClass('show');
+    $faCaretDown.removeClass('caret-hover');
+    $dropdownToggle.css({"color": "rgba(0, 0, 0, 0.5)"});
   });
 
   //Open NAV menu toggle item on mouse over
 
-  // TODO: MAKE NAV SPECIFIC VERSION DROPDOWN CODE HERE
-  $('.dropdown-toggle').on('mouseenter', function(){
+  // TODO: MAKE NAV/CALENDAR MENU SPECIFIC VERSION DROPDOWN CODE HERE
 
-    $('.dropdown-menu').toggleClass('show');
-    $(this).css({"color":"#f27126"});
-    // $('.fa-caret-down').css{("transition":"rotate(180)")};
+  $dropdownToggle.on('mouseenter', function(){
 
+    $dropdownMenu.toggleClass('show');
+    
     //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
-    $('.fa-caret-down').addClass('caret-hover');
+    $faCaretDown.addClass('caret-hover');
 
+    $(this).css({"color":"#f27126"});
   });
 
   // TODO: MAKE CALENDAR VERSION OF NAV DROPDOWN CODE HERE
-  $('.calendar-dropdown-toggle').on('mouseenter', function(){
+  $calendarDropdownToggle.on('mouseenter', function(){
 
-    $('.calendar-dropdown-menu').toggleClass('show');
+    $calendarDropdownMenu .toggleClass('show');
     $(this).css({"color":"#f27126"});
     // $('.fa-caret-down').css{("transition":"rotate(180)")};
 
     //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
-    $('.calendar-caret').addClass('caret-hover');
+    $calendarCaret.addClass('caret-hover');
 
   });
 
-  $('.dropdown-menu').on('mouseleave', function(){
+  $dropdownMenu.on('mouseleave', function(){
     $(this).toggleClass('show');
-    $('.dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
-    $('.fa-caret-down').removeClass('caret-hover');
+    $dropdownToggle.css({"color":"rgba(0,0,0,0.5)"});
+    $faCaretDown.removeClass('caret-hover');
   });
 
   //Open CALENDAR menu toggle item on mouse over
 
   // Reset drop down on load
-  $('.calendar-dropdown-menu').hide();
+  $calendarDropdownMenu.hide();
 
-  $('.calendar-dropdown-toggle').on('mouseenter', function(){
+  // TODO: IS THIS REDUNDANT CODE?
+  $calendarDropdownToggle.on('mouseenter', function(){
 
     // $('.dropdown-menu-calendar').toggleClass('show');
-    $('.calendar-dropdown-menu').show();
+    $calendarDropdownMenu.show();
     $(this).css({"color":"#f27126"});
     // $('.fa-caret-down').css{("transition":"rotate(180)")};
 
     //animate arrow with a css transition class (add arrow next to it as a span and rotate it 180 deg.)
-    $('.calendar-fa-caret-down').addClass('calendar-caret-hover');
+    $calendarFaCaretDown.addClass('calendar-caret-hover');
 
   });
 
 
-  $('.calendar-dropdown-toggle').on('mouseleave', function(){
-    $('.calendar-dropdown-menu').hide();
+  $calendarDropdownToggle.on('mouseleave', function(){
+    // $calendarDropdownMenu.hide();
+    
     // TODO: Menu hides properly but animation does not work during hide
-    $('.calendar-fa-caret-down').removeClass('calendar-caret-hover');
+    $calendarFaCaretDown.removeClass('calendar-caret-hover');
   });
 
   // TODO: THIS IS WORKING WHEN MOUSELEAVE MENU ITEM - NOT WHEN MOUSE LEAVES MENU BUTTON
-  $('.calendar-dropdown-menu').on('mouseleave', function(){
+  $calendarDropdownMenu.on('mouseleave', function(){
     $('.dropdown-menu-calendar').hide();
-    $('.calendar-fa-caret-down').removeClass('calendar-caret-hover');
+    $calendarFaCaretDown.removeClass('calendar-caret-hover');
   });
 
   // Hide menu on mouseleave of menu
   $('.dropdown-menu-calendar').on('mouseleave', function(){
     $(this).hide();
     $('.dropdown-toggle-calendar').css({"color":"rgba(0,0,0,0.5)"});
-    $('.calendar-fa-caret-down').removeClass('calendar-caret-hover');
+    $calendarFaCaretDown.removeClass('calendar-caret-hover');
   });
 
-  /*************************************
-  ******** FORMAT WORKOUT AREA *********
-  *************************************/
-
-  const workOutText = document.getElementsByClassName('workoutText');
-
-  for(let i = 0; i < workOutText.length; i++){
-    document.getElementsByClassName('workoutText')[i].innerText = document.getElementsByClassName('workoutText')[i].innerText.split(' ').slice(0,25).join(' ').concat('...');
-  }
-
-  // let $workoutTextPrimary = $('#workoutTextPrimary').text().split(' ').slice(0,25).join(' ').concat('...');
-  // document.getElementById('workoutTextPrimary').innerHTML = $workoutTextPrimary;
-  //
-  // let $workoutTextSecondary = $('#workoutTextSecondary').text().split(' ').slice(0,25).join(' ').concat('...');
-  // document.getElementById('workoutTextSecondary').innerHTML = $workoutTextSecondary;
 
 
 
   //CALENDAR PAGE DROPDOWN
   //Open or close menu toggle item on click
-  $('.calendar-dropdown-toggle').on('click', function(){
+  $calendarDropdownToggle.on('click', function(){
     // CLOSE TOGGLE IF OPEN... IF NOT OPEN, OPEN.
 
     // if ( $('.calendar-dropdown-menu').hasClass('show') ){
@@ -215,20 +219,21 @@
     //   $('.calendar-dropdown-menu').addClass('show');
     // }
 
-    $('.calendar-dropdown-menu').show();
+    $calendarDropdownMenu.show();
 
-    $('.calendar-caret').addClass('caret-hover');
+    $calendarCaret.addClass('caret-hover');
   });
 
-  $('.calendar-dropdown-menu').on('mouseleave', function(){
+  
+  $calendarDropdownMenu.on('mouseleave', function(){
 
     //MAKE DISPLAY NONE A HELPER CLASS
     $(this).hide(250);
-    //
-    $('.calendar-dropdown-toggle').css({"color":"rgba(0,0,0,0.5)"});
+    
+    $calendarDropdownToggle.css({"color":"rgba(0,0,0,0.5)"});
 
     //reverse animate arrow with a css transition class
-    $('.calendar-caret').removeClass('caret-hover');
+    $calendarCaret.removeClass('caret-hover');
 
     //IF MOUSE OVER OTHER MENU-ITEM REMOVE HOVER STYLE
 
@@ -245,7 +250,7 @@
   // $conditioning.hide();
   // $oly.hide();
 
-  $('.calendar-dropdown-item').on('click', function(){
+  $calendarDropdownItem.on('click', function(){
 
     //remove classes to start
       //add class to menu item then check for case that menu-item has class
@@ -254,6 +259,7 @@
 
 
     //Resets for filters
+    // TODO: Refactor to avoid using vh units
     $('#calendarContainer').css({"height":"422vh"});
 
     $crossfit.show();
@@ -295,6 +301,9 @@
     //   document.getElementById("demo").innerHTML = text;
     // }
 
+
+    const $calendarContainer = $('#calendarContainer');
+    
     // If Crossfit clicked
     if( $('#crossfit').hasClass('filtered') ){
 
@@ -304,10 +313,10 @@
       $conditioning.hide();
 
       // Close filter dropdown menu
-      $('.calendar-dropdown-menu').hide();
+      $calendarDropdownMenu.hide();
 
       //Adjust page HEIGHT
-      $('#calendarContainer').css({"height":"280vh"});
+      $calendarContainer.css({"height":"280vh"});
 
       console.log( "Crossfit" );
 
@@ -320,10 +329,10 @@
       $conditioning.hide();
 
       // Close filter dropdown menu
-      $('.calendar-dropdown-menu').hide();
+      $calendarDropdownMenu.hide();
 
       //Adjust page HEIGHT
-      $('#calendarContainer').css({"height":"264vh"});
+      $calendarContainer.css({"height":"264vh"});
 
       console.log( "Oly" );
 
@@ -336,10 +345,10 @@
       $conditioning.hide();
 
       // Close filter dropdown menu
-      $('.calendar-dropdown-menu').hide();
+      $calendarDropdownMenu.hide();
 
       //Adjust page HEIGHT
-      $('#calendarContainer').css({"height":"290vh"});
+      $calendarContainer.css({"height":"290vh"});
 
       console.log( "Open Gym" );
 
@@ -352,14 +361,14 @@
       // $conditioning.hide();
 
       // Close filter dropdown menu
-      $('.calendar-dropdown-menu').hide();
+      $calendarDropdownMenu.hide();
 
       //Adjust page HEIGHT
-      $('#calendarContainer').css({"height":"244vh"});
+      $calendarContainer.css({"height":"244vh"});
 
       console.log( "Conditioning" );
 
-    } else if ( $('#showAll').hasClass('filtered') ){
+    } else if ( $showAll.hasClass('filtered') ){
       $crossfit.show();
       $oly.show();
       $openGym.show();
@@ -367,15 +376,15 @@
 
       //Reset page HEIGHT
       // TODO: Stlye height in CSS such that container flows around calendar
-      $('#calendarContainer').css({"height":"422vh"});
+      $calendarContainer.css({"height":"422vh"});
 
     } else {
       // Close filter dropdown menu
-      $('.calendar-dropdown-menu').hide();
-      $('.calendar-dropdown-item').removeClass('filtered');
+      $calendarDropdownMenu.hide();
+      $calendarDropdownItem.removeClass('filtered');
 
       //Adjust page HEIGHT
-      $('#calendarContainer').css({"height":"422vh"});
+      $calendarContainer.css({"height":"422vh"});
 
       console.log("Default");
 
@@ -408,8 +417,9 @@
   // TODO: HIDE CALENDAR DROPDOWN WHEN LINK IS CLICKED
     // TAKE FILTER ACTION TO HIDE ALL BUT CLICKED LINK ITEM IN DROPDOWN
 
+  const $pageLink = $('.page-link');
   // Pagination active style application
-  $('.page-link').on('click', function(){
+  $pageLink.on('click', function(){
     if( $(this).hasClass('page-previous') || $(this).hasClass('page-next') ) {
       // TODO: check if next button
         // Check if there is a next page
@@ -422,7 +432,7 @@
 
 
     } else {
-      $('.page-link').removeClass('active');
+      $pageLink.removeClass('active');
       $(this).addClass('active');
     }
   });
@@ -450,22 +460,29 @@
     "Fitness"
   ];
 
-
   let counter = 0;
 
   setInterval(function(){
+    const $lightTextDynamic = $('.lightTextDynamic');
 
     if (counter < eliteArr.length){
-      $('.lightTextDynamic').text("");
-      $('.lightTextDynamic').text(eliteArr[counter]);
+      $lightTextDynamic.text("");
+      $lightTextDynamic.text(eliteArr[counter]);
     }
 
     if(eliteArr[counter] === "Fitness"){
-      $('.lightTextDynamic').css({"color": "#fff"});
+      $lightTextDynamic.css({"color": "#fff"});
     }
 
     counter++;
 
   }, 1350);
+
+  // Formats "Crossfit workout of the day" area of home page to max at 25 words
+ const workOutText = document.getElementsByClassName('workoutText');
+
+ for(let i = 0; i < workOutText.length; i++){
+   document.getElementsByClassName('workoutText')[i].innerText = document.getElementsByClassName('workoutText')[i].innerText.split(' ').slice(0,25).join(' ').concat('...');
+ }
 
 // })();

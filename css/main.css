@@ -85,38 +85,7 @@ button:focus {
           transform: rotate(-180deg);
 }
 
-/* FILTER DROPDOWN */
 
-.calendar-dropdown-menu {
-  border-width: 3px;
-}
-
-.calendar-dropdown-item {
-  color: rgba(0,0,0,0.5);
-}
-
-.calendar-dropdown-item:hover {
-  background-color: #f27126;
-  color: #fff;
-}
-
-.calendar-dropdown-toggle::after {
-  display: none;
-}
-
-.calendar-dropdown-divider {
-  border-top: 3px solid #e9ecef;
-}
-
-.calendar-fa-caret-down {
-  -webkit-transition: 0.25s ease all;
-  transition: 0.25s ease all;
-}
-
-.calendar-fa-caret-down.caret-hover {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
 
 .btn-dark {
   color: #fff;
