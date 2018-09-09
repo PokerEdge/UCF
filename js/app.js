@@ -117,6 +117,11 @@
  const $dropdownMenu = $('.dropdown-menu');
  const $dropdownToggle = $('.dropdown-toggle');
  const $faCaretDown = $('.fa-caret-down');
+
+
+   /***************************
+   * BEGIN CALENDAR FILTER JS *
+   ***************************/
  
  const $calendarDropdownToggle = $('.calendar-dropdown-toggle');
  const $calendarCaret = $('.calendar-caret');
@@ -278,31 +283,50 @@
 
     $(this).addClass('filtered');
 
-    //USE SWITCH STATEMENT
-
-    //EXAMPLE SWITCH STATEMENT
-    // function checkFruit() {
-    //   var text;
-    //   var fruits = document.getElementById("myInput").value;
-    //
-    //   switch(fruits) {
-    //     case "Banana":
-    //       text = "Banana is good!";
-    //       break;
-    //     case "Orange":
-    //       text = "I am not a fan of orange.";
-    //       break;
-    //     case "Apple":
-    //       text = "How you like them apples?";
-    //       break;
-    //     default:
-    //       text = "I have never heard of that fruit.";
-    //   }
-    //   document.getElementById("demo").innerHTML = text;
-    // }
-
-
     const $calendarContainer = $('#calendarContainer');
+
+    // FILTER STYLES DYNAMICALLY - NEED TO REFRESH CALENDAR
+    function resetCalendarStyle() {
+      const $td = $('td');
+
+      $td.each(function(index) {
+        
+        if($td.innerText !== ''){
+          if(index % 8 !== 0){
+            $td[index].style.background = '#f27126';
+          }
+        }
+      });
+    }
+
+    function filterStyleCalendar(){
+      
+      const $tr = $('tr'); 
+      const $td = $('td'); 
+
+      $tr.each(function(trIndex) {
+
+        if(trIndex % 2 === 0) {
+          // console.log('zero row index');
+          for(let i = 0; i < 8; i++) {
+            if($td[i + trIndex * 8].innerText === ''){
+              $td[i + trIndex * 8].style.background = "rgb(245,245,245)";
+            }
+            // if($td[i + trIndex * 8].innerText !== ''){
+            //   $td[i + trIndex * 8].style.background = "#f27126";
+            // }
+            $td[i + trIndex * 8].style.borderBottom = "3px solid white";
+          }  
+        } else if (trIndex % 2 === 1) {
+          for(let i = 0; i < 8; i++) {
+            if($td[i + trIndex * 8].innerText === ''){
+              $td[i + trIndex * 8].style.background = "rgba(202,202,202,0.7)";  
+            }
+            $td[i + trIndex * 8].style.borderBottom = "3px solid white";
+          }
+        }
+      });
+    }
     
     // If Crossfit clicked
     if( $('#crossfit').hasClass('filtered') ){
@@ -319,14 +343,17 @@
       $calendarContainer.css({"height":"280vh"});
 
       console.log( "Crossfit" );
+      
+      resetCalendarStyle();
+      filterStyleCalendar();
 
     // If Oly clicked
     } else if( $('#oly').hasClass('filtered') ) {
 
       $crossfit.hide();
-      // $oly.hide();
       $openGym.hide();
       $conditioning.hide();
+      // $oly.hide();
 
       // Close filter dropdown menu
       $calendarDropdownMenu.hide();
@@ -335,6 +362,10 @@
       $calendarContainer.css({"height":"264vh"});
 
       console.log( "Oly" );
+
+      resetCalendarStyle();
+      filterStyleCalendar();
+      
 
     // If Open Gym clicked
     } else if( $('#openGym').hasClass('filtered') ) {
@@ -352,6 +383,9 @@
 
       console.log( "Open Gym" );
 
+      resetCalendarStyle();
+      filterStyleCalendar();
+
     // If Conditioning clicked
     } else if( $('#conditioning').hasClass('filtered') ){
 
@@ -368,6 +402,9 @@
 
       console.log( "Conditioning" );
 
+      resetCalendarStyle();
+      filterStyleCalendar();
+
     } else if ( $showAll.hasClass('filtered') ){
       $crossfit.show();
       $oly.show();
@@ -377,6 +414,9 @@
       //Reset page HEIGHT
       // TODO: Stlye height in CSS such that container flows around calendar
       $calendarContainer.css({"height":"422vh"});
+      console.log('Show all');
+      resetCalendarStyle();
+      filterStyleCalendar();
 
     } else {
       // Close filter dropdown menu
@@ -387,35 +427,14 @@
       $calendarContainer.css({"height":"422vh"});
 
       console.log("Default");
-
+      resetCalendarStyle();
+      filterStyleCalendar();
     }
-
-    // TODO: STYLE UNOCCUPIED TABLE CELLS AFTER FILTERING
-
-  //   const $tableCells = $('.users td');
-  //   const tableArr = [];
-  //
-  //   // for(let i = 0; i < $tableCells.length; i++){
-  //   //
-  //   //   // tableArr.push($tableCells:nth-child(3));
-  //   //
-  //   //   // if(!){
-  //   //   //
-  //   //   // }
-  //   //   // console.log(i);
-  //   // }
-  //
-  //   console.log ( $('users td') );
-  //
   });
 
-
-  //TEXT OF ENTIRE CALENDAR
-  //$('.users tbody').children().children().text();
-
-
-  // TODO: HIDE CALENDAR DROPDOWN WHEN LINK IS CLICKED
-    // TAKE FILTER ACTION TO HIDE ALL BUT CLICKED LINK ITEM IN DROPDOWN
+  /**************************
+   * END CALENDAR FILTER JS *
+   **************************/
 
   const $pageLink = $('.page-link');
   // Pagination active style application

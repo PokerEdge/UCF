@@ -87,15 +87,13 @@
 }
 
 /* END PASTED IN STYLES */
-
-
 .calendar-dropdown-menu {
   margin-top: 0vh;
   /* margin-left: 5%; */
   border: 3px rgba(0, 0, 0, 0.15) solid;
   border-radius: 0.25rem;
   min-width: 10em;
-  width: 197px;
+  width: 210px;
   top: 100%;
   right: 5%;
   z-index: 1000;
@@ -107,8 +105,14 @@
 }
 
 .calendar-dropdown a {
+  padding: 1vh;
+  /* color: rgb(33, 37, 41); */
+  color: rgba(0,0,0,0.5);
+  font-weight: 600;
+}
+
+#calendarDropdownMenuLink {
   padding: 2vh;
-  color: #212529;
 }
 
 /*STYLE :ACTIVE STATE FOR DROPDOWN*/
