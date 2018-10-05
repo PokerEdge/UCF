@@ -6,33 +6,19 @@
 /***** CALENDAR AREA STYLES *****/
 /********************************/
 
-/* TODO: Style dropdown menu for calendar filter */
-
 #calendarContainer {
-  /* Manage that this view height does not push menu items into footer when menu is open
-    if open, height 355vh (will change with styled menu)
-    if closed height 340vh
-   */
-  height: 355vh;
+  height: 3475px;
   width: 100%;
   background: rgb(245,245,245);
 }
 
 .calendar-title {
   font-family: "Oswald-SemiBold", arial, sans-serif;
-  font-size: 3em;
+  font-size: 3.25em;
   color: #f27126;
-  padding: 6vh 0 2vh 0;
+  padding: 60px 5% 20px 5%;
   text-align: center;
 }
-
-/*.calendar-description {
-  font-family: "Oswald-SemiBold", arial, sans-serif;
-  font-size: 1.8em;
-  color: #f27126;
-  margin-top: 4vh;
-  text-align: center;
-}*/
 
 .dropdown-style {
   background: #f27126 !important;
@@ -44,19 +30,20 @@
 
 .calendar-week {
   font-family: "Oswald-SemiBold", arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #f27126;
-  margin-top: 3vh;
+  margin-top: 34px;
   padding-left: 5%;
-  padding-bottom: 1vh;
+  margin-bottom: 12px;
   text-align: left;
 }
 
-/* START PASTED IN STYLES */
-/* FILTER DROPDOWN */
-
 .calendar-dropdown-menu {
   border-width: 3px;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+  background: #fff;
 }
 
 .calendar-dropdown-item {
@@ -86,14 +73,12 @@
           transform: rotate(-180deg);
 }
 
-/* END PASTED IN STYLES */
 .calendar-dropdown-menu {
-  margin-top: 0vh;
-  /* margin-left: 5%; */
+  margin-top: 0px;
   border: 3px rgba(0, 0, 0, 0.15) solid;
   border-radius: 0.25rem;
   min-width: 10em;
-  width: 210px;
+  width: 220px;
   top: 100%;
   right: 5%;
   z-index: 1000;
@@ -105,17 +90,14 @@
 }
 
 .calendar-dropdown a {
-  padding: 1vh;
-  /* color: rgb(33, 37, 41); */
+  padding: 10px;
   color: rgba(0,0,0,0.5);
   font-weight: 600;
 }
 
 #calendarDropdownMenuLink {
-  padding: 2vh;
+  padding: 20px;
 }
-
-/*STYLE :ACTIVE STATE FOR DROPDOWN*/
 
 .users {
   table-layout: fixed;
@@ -145,7 +127,7 @@
 }
 .users td,
 .users th {
-  height: 6vh;
+  height: 60px;
   padding: 0;
 }
 
@@ -227,4 +209,95 @@
   border-bottom-color: #f27126;
   border-bottom-style: solid;
   border-bottom-width: 3px;
+}
+
+/************************
+*** RESPONSIVE STYLES ***
+************************/
+
+@media (min-width: 465px) and (max-width: 635px) {
+
+  #currentDate {
+    font-size: 0.8em;
+  }
+
+  .users th {
+    font-size: 0.75em;
+  }
+  
+  /*Time during the day, e.g. the 11:00am row*/
+  .calendar-time {
+    font-size: 0.5em;
+  }
+
+  /*Time for each class, e.g. Crossfit is from "11a-12p"*/
+  .class-time {
+    font-size: 0.53125em;
+  }
+
+  /*For top cells - light border-top & border-bottom is dark*/
+  .top-wod-connected-first-row {
+    font-size: 0.5em;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 636px) and (max-width: 768px) {
+  .calendar-title {
+    font-family: "Oswald-SemiBold", arial, sans-serif;
+    font-size: 2.75em;
+  }
+  
+  .users th {
+    font-size: 0.80em;
+  }
+}
+
+@media (min-width: 580px) and (max-width: 635px) {
+  .calendar-title {
+    font-family: "Oswald-SemiBold", arial, sans-serif;
+    font-size: 2.5em;
+  }
+  
+  .users th {
+    font-size: 0.65em;
+  }
+}
+
+@media (min-width: 465px) and (max-width: 579px) {
+  .calendar-title {
+    font-family: "Oswald-SemiBold", arial, sans-serif;
+    font-size: 2em;
+  }
+  
+  .users th {
+    font-size: 0.45em;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 464px) {
+  .calendar-title {
+    font-family: "Oswald-SemiBold", arial, sans-serif;
+    font-size: 1.5em;
+  }
+
+  .users th {
+    font-size: 0.25em;
+  }
+  
+  /*Time during the day, e.g. the 11:00am row*/
+  .calendar-time {
+    font-size: 0.2667em;
+  }
+
+  /*Time for each class, e.g. Crossfit is from "11a-12p"*/
+  .class-time {
+    font-size: 0.2833em;
+  }
+
+  /*For top cells - light border-top & border-bottom is dark*/
+  .top-wod-connected-first-row {
+    font-size: 0.2667em;
+    font-weight: 600;
+  }
 }
